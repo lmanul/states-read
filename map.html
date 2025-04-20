@@ -11,17 +11,29 @@
       }
       #map {
         height: 80vh;
-        margin: 0 auto;
-        width: 80%;
+        text-align: center;
+        width: 100%;
       }
       #map svg {
-        height: 100%;
-        width: 100%;
+      }
+      .highlight {
+        fill: #999 !important;
+      }
+      #popup {
+        background-color: white;
+        border: 1px solid #222;
+        box-shadow: 15px 15px 23px rgba(0, 0, 0, 0.4);
+        display: none;
+        position: fixed;
+        padding: 1.5ex;
+        text-align: center;
+        z-index: 20;
       }
     </style>
     <script src="map.js"></script>
   </head>
   <body onload="onMapLoad()">
     <div id="map">Loading...</div>
+    <div id="popup"></div>
   </body>
 </html>
