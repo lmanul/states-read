@@ -20,7 +20,7 @@ Data and visualization about reading programs and assessments in US states
     * Content focus: range of percentages (two numbers, 0 — 100)
     * Estimated Time: number in minutes
     * Time in Proposed Combinations: number in minutes
-  - Percentage of time (numbers for 0 — 100)
+  - Percentage of time (numbers from 0 — 100)
     * reading
     * writing
     * discussion
