@@ -1,64 +1,64 @@
 const STATES = {
-  'Alabama': 'AL',
-  'Alaska': 'AK',
-  'Arizona': 'AZ',
-  'Arkansas': 'AR',
-  'California': 'CA',
-  'Colorado': 'CO',
-  'Connecticut': 'CT',
-  'Delaware': 'DE',
-  'District of Columbia': 'DC',
-  'Florida': 'FL',
-  'Georgia': 'GA',
-  'Hawaii': 'HI',
-  'Idaho': 'ID',
-  'Illinois': 'IL',
-  'Indiana': 'IN',
-  'Iowa': 'IA',
-  'Kansas': 'KS',
-  'Kentucky': 'KY',
-  'Louisiana': 'LA',
-  'Maine': 'ME',
-  'Maryland': 'MD',
-  'Massachusetts': 'MA',
-  'Michigan': 'MI',
-  'Minnesota': 'MN',
-  'Mississippi': 'MS',
-  'Missouri': 'MO',
-  'Montana': 'MT',
-  'Nebraska': 'NE',
-  'Nevada': 'NV',
-  'New Hampshire': 'NH',
-  'New Jersey': 'NJ',
-  'New Mexico': 'NM',
-  'New York': 'NY',
-  'North Carolina': 'NC',
-  'North Dakota': 'ND',
-  'Ohio': 'OH',
-  'Oklahoma': 'OK',
-  'Oregon': 'OR',
-  'Pennsylvania': 'PA',
-  'Rhode Island': 'RI',
-  'South Carolina': 'SC',
-  'South Dakota': 'SD',
-  'Tennessee': 'TN',
-  'Texas': 'TX',
-  'Utah': 'UT',
-  'Vermont': 'VT',
-  'Virginia': 'VA',
-  'Washington': 'WA',
-  'West Virginia': 'WV',
-  'Wisconsin': 'WI',
-  'Wyoming': 'WY',
+  'AL': 'Alabama',
+  'AK': 'Alaska',
+  'AZ': 'Arizona',
+  'AR': 'Arkansas',
+  'CA': 'California',
+  'CO': 'Colorado',
+  'CT': 'Connecticut',
+  'DC': 'District of Columbia',
+  'DE': 'Delaware',
+  'FL': 'Florida',
+  'GA': 'Georgia',
+  'HI': 'Hawaii',
+  'ID': 'Idaho',
+  'IL': 'Illinois',
+  'IN': 'Indiana',
+  'IA': 'Iowa',
+  'KS': 'Kansas',
+  'KY': 'Kentucky',
+  'LA': 'Louisiana',
+  'ME': 'Maine',
+  'MD': 'Maryland',
+  'MA': 'Massachusetts',
+  'MI': 'Michigan',
+  'MN': 'Minnesota',
+  'MS': 'Mississippi',
+  'MO': 'Missouri',
+  'MT': 'Montana',
+  'NE': 'Nebraska',
+  'NV': 'Nevada',
+  'NH': 'New Hampshire',
+  'NJ': 'New Jersey',
+  'NM': 'New Mexico',
+  'NY': 'New York',
+  'NC': 'North Carolina',
+  'ND': 'North Dakota',
+  'OH': 'Ohio',
+  'OK': 'Oklahoma',
+  'OR': 'Oregon',
+  'PA': 'Pennsylvania',
+  'RI': 'Rhode Island',
+  'SC': 'South Carolina',
+  'SD': 'South Dakota',
+  'TN': 'Tennessee',
+  'TX': 'Texas',
+  'UT': 'Utah',
+  'VT': 'Vermont',
+  'VA': 'Virginia',
+  'WA': 'Washington',
+  'WV': 'West Virginia',
+  'WI': 'Wisconsin',
+  'WY': 'Wyoming',
 };
-const stateCodes = Object.values(STATES);
+const stateCodes = Object.keys(STATES);
 
 let stateEls = [];
 
 const HIGHLIGHT_CLASS = 'highlight';
 const POPUP_ANCHOR_OFFSET = 40;
 const POPUP_WIDTH = 300;
-const POPUP_HEIGHT = 170;
+const POPUP_HEIGHT = 300;
 const POPUP_WINDOW_SAFETY_PADDING = 20;
 
 const isStateElement = (el) => {
@@ -88,6 +88,14 @@ const onMapHover = (e) => {
   state.classList.add(HIGHLIGHT_CLASS);
 };
 
+const getPopupTitle = (id) => {
+  for (let stateId in STATES) {
+    if (stateId.toLowerCase() === id) {
+      return STATES[stateId];
+    }
+  }
+};
+
 const showPopup = (show, clientX, clientY, id) => {
   const el = document.getElementById('popup');
   el.style.display = show ? 'block' : 'none';
@@ -114,11 +122,7 @@ const showPopup = (show, clientX, clientY, id) => {
     el.style.width = POPUP_WIDTH + 'px';
     el.style.height = POPUP_HEIGHT + 'px';
 
-    el.innerHTML = 'test';
-    // const prices =
-    //       getPricesForIdAndSelectedIndexRange(id, getSelectedIndexRange());
-
-    // el.innerHTML = getPopupTitle(id) + '<br/><br/>' + displayPricesRangeForPopup(prices);
+    el.innerHTML = getPopupTitle(id) + '<br/><br/>';
   }
 }
 
