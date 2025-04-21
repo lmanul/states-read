@@ -136,7 +136,7 @@ const processMap = (mapEl) => {
 
 const onMapLoad = async () => {
   const mapEl = document.getElementById('map');
-  const response = await fetch('/states.svg');
+  const response = await fetch('states.svg');
   const svgData = await response.text();
   mapEl.innerHTML = svgData;
   processMap(mapEl);
