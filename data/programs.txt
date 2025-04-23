@@ -1,58 +1,73 @@
 id|HM
 name|HMH-Into Reading
+states|CO,CT,TN,AR,NY,OH
 
 
 id|WO
 name|Wonders (McGraw-Hill 2017, 2020)
+states|CO,CT,DC,TN,AR,OH
 
 
 id|EI
 name|EL Imagine Learning (LearnZillion & Open Up)
+states|CO,CT,TN,NY,OH
 
 
 id|AM
 name|Amplify CKLA 2017
+states|CO,CT,TN,AR,OH
 
 
 id|WW
 name|Wit & Wisdom
+states|CT,TN,AR,NY,OH
 
 
 id|BA
 name|Benchmark Advance
+states|CO,DC,TN,OH
 
 
 id|BW
 name|Benchmark Workshop
+states|CO,DC,AR,OK,
 
 
 id|OC
 name|Open Court (2016)
+states|CO,CT,AR,
 
 
 id|SL
 name|Savvas Learning-myView Literacy 2020
+states|CO,CT,OH
 
 
 id|AR
 name|American Reading Company -ARC Core (2017)
+states|CT,OH
 
 
 id|CC
 name|Center for the Collaborative Classroom
+states|CO,AR,
 
 
 id|ZB
 name|Zaner Bloser Superkids reading Program (2017)
+states|CO,AR
 
 
 id|RM
 name|Reading Mastery Transformations (2021)
+states|CO,
 
 
 id|OE
 name|Our EL Education K-5 ELA
+states|OH
 
 
 id|FP
 name|Fishtank Plus ELA
+states|OH
