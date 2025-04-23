@@ -1,5 +1,39 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=map.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>States Read</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+      }
+      #map {
+        height: 80vh;
+        text-align: center;
+        width: 100%;
+      }
+      #map svg {
+      }
+      .highlight {
+        fill: #999 !important;
+      }
+      #popup {
+        background-color: white;
+        border: 1px solid #222;
+        box-shadow: 12px 12px 18px rgba(0, 0, 0, 0.3);
+        display: none;
+        position: fixed;
+        padding: 1.5ex;
+        text-align: center;
+        z-index: 20;
+      }
+    </style>
+    <script src="map.js"></script>
   </head>
+  <body onload="onMapLoad()">
+    <div id="map">Loading...</div>
+    <div id="popup"></div>
+  </body>
 </html>

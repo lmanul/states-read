@@ -138,6 +138,10 @@ const onMapLoad = async () => {
   const mapEl = document.getElementById('map');
   const response = await fetch('states.svg');
   const svgData = await response.text();
+
+  const assessmentData = await fetch('data/assessments.txt');
+  const programData = await fetch('data/programs.txt');
+
   mapEl.innerHTML = svgData;
   processMap(mapEl);
   mapEl.addEventListener('mouseover', onMapHover);
