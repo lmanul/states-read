@@ -53,6 +53,26 @@ const STATES = {
 };
 const stateCodes = Object.keys(STATES);
 
+class Assessment {
+  constructor(id, name) {
+    this.id = id;
+    this.name = name;
+  }
+}
+
+class Program {
+  constructor(id, name) {
+    this.id = id;
+    this.name = name;
+  }
+}
+
+let assessments;
+let programs;
+
+const processAssessmentData = (raw) => {};
+const processProgramData = (raw) => {};
+
 let stateEls = [];
 
 const HIGHLIGHT_CLASS = 'highlight';
@@ -110,12 +130,9 @@ const showPopup = (show, clientX, clientY, id) => {
       x = clientX - POPUP_WIDTH - POPUP_ANCHOR_OFFSET;
     } else {
       x = clientX + POPUP_ANCHOR_OFFSET;
-    }
-    if (overflowY) {
-      y = clientY - POPUP_HEIGHT - POPUP_ANCHOR_OFFSET;
-    } else {
-      y = clientY + POPUP_ANCHOR_OFFSET;
-    }
+    }let assessmentData;
+    let programData;
+
 
     el.style.top = '' + y + 'px';
     el.style.left = '' + x + 'px';
@@ -139,8 +156,16 @@ const onMapLoad = async () => {
   const response = await fetch('states.svg');
   const svgData = await response.text();
 
-  const assessmentData = await fetch('data/assessments.txt');
-  const programData = await fetch('data/programs.txt');
+  const assessmentResponse = await fetch('data/assessments.txt');
+  const assessmentData = await assessmentResponse.text();
+  const programResponse = await fetch('data/programs.txt');
+  const programData = await programResponse.text();
+
+  processAssessmentData();
+  processProgramData();
+
+  console.log(programData);
+  console.log(assessmentData);
 
   mapEl.innerHTML = svgData;
   processMap(mapEl);
