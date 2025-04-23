@@ -1,0 +1,58 @@
+id|HM
+name|HMH-Into Reading
+
+
+id|WO
+name|Wonders (McGraw-Hill 2017, 2020)
+
+
+id|EI
+name|EL Imagine Learning (LearnZillion & Open Up)
+
+
+id|AM
+name|Amplify CKLA 2017
+
+
+id|WW
+name|Wit & Wisdom
+
+
+id|BA
+name|Benchmark Advance
+
+
+id|BW
+name|Benchmark Workshop
+
+
+id|OC
+name|Open Court (2016)
+
+
+id|SL
+name|Savvas Learning-myView Literacy 2020
+
+
+id|AR
+name|American Reading Company -ARC Core (2017)
+
+
+id|CC
+name|Center for the Collaborative Classroom
+
+
+id|ZB
+name|Zaner Bloser Superkids reading Program (2017)
+
+
+id|RM
+name|Reading Mastery Transformations (2021)
+
+
+id|OE
+name|Our EL Education K-5 ELA
+
+
+id|FP
+name|Fishtank Plus ELA
