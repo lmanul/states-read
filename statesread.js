@@ -158,6 +158,15 @@ const isStateElement = (el) => {
   return id !== "" && stateCodes.includes(id.toUpperCase());
 };
 
+const clearStateHighlight = () => {
+  let currentlyHighlighted = document.getElementsByClassName(HIGHLIGHT_CLASS);
+  if (currentlyHighlighted.length > 0) {
+    for (let i = 0; i < currentlyHighlighted.length; i++) {
+      currentlyHighlighted[i].classList.remove(HIGHLIGHT_CLASS);
+    }
+  }
+};
+
 const onMapHover = (e) => {
   if (!stateEls.length) {
     // No data yet.
@@ -165,16 +174,12 @@ const onMapHover = (e) => {
   }
   if (!isStateElement(e.target)) {
     showPopup(false);
+    clearStateHighlight();
     return;
   }
   let id = e.target.getAttribute("id");
   const state = e.target;
-  let currentlyHighlighted = document.getElementsByClassName(HIGHLIGHT_CLASS);
-  if (currentlyHighlighted.length > 0) {
-    for (let i = 0; i < currentlyHighlighted.length; i++) {
-      currentlyHighlighted[i].classList.remove(HIGHLIGHT_CLASS);
-    }
-  }
+  clearStateHighlight();
   showPopup(true, e.clientX, e.clientY, id);
   state.classList.add(HIGHLIGHT_CLASS);
 };
@@ -186,6 +191,12 @@ const getPopupTitle = (stateCode) => {
 const formatSingleAssessmentPill = (id) => {
   return `
     <div class="pill assessment-pill" onclick="showAssessment('${id}')">${id}</div>
+  `;
+};
+
+const formatSingleProgramPill = (id) => {
+  return `
+    <div class="pill program-pill" onclick="showProgram('${id}')">${id}</div>
   `;
 };
 
@@ -206,9 +217,18 @@ const clearDetails = () => {
 const formatAssessmentDetails = (id) => {
   const assessment = assessments[id];
   return `
-    <h1>${assessment.name}</h1>
+    <h1 class="assessment">${assessment.name}</h1>
     <p><b>Approved in: </b>
     ${assessment.approvingStates.map(formatSingleStatePill).join(' ')}
+  `;
+};
+
+const formatProgramDetails = (id) => {
+  const program = programs[id];
+  return `
+    <h1 class="program">${program.name}</h1>
+    <p><b>Approved in: </b>
+    ${program.approvingStates.map(formatSingleStatePill).join(' ')}
   `;
 };
 
@@ -218,15 +238,20 @@ const formatPopupContent = (stateCode) => {
 
   return `
    ${getPopupTitle(stateCode)}
-   <h2>Approved assessments</h2>
+   <h2 class="assessment">Approved assessments</h2>
    ${approvedAssessments.map(formatSingleAssessmentPill).join('')}
-   <h2>Approved programs</h2>
-   ${approvedPrograms.join(' ')}`;
+   <h2 class="program">Approved programs</h2>
+   ${approvedPrograms.map(formatSingleProgramPill).join(' ')}`;
 };
 
 const showAssessment = (id) => {
   clearDetails();
   setDetails(formatAssessmentDetails(id));
+};
+
+const showProgram = (id) => {
+  clearDetails();
+  setDetails(formatProgramDetails(id));
 };
 
 const showPopup = (show, clientX, clientY, id) => {
