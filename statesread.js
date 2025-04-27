@@ -57,6 +57,7 @@ class Assessment {
   constructor(id, name) {
     this.id = id;
     this.name = name;
+    this.approvingStates = [];
   }
 }
 
@@ -64,21 +65,92 @@ class Program {
   constructor(id, name) {
     this.id = id;
     this.name = name;
+    this.approvingStates = [];
+  }
+}
+
+class State {
+  constructor(id, name) {
+    this.id = id;
+    this.name = name;
+    this.approvedAssessments = [];
+    this.approvedPrograms = [];
   }
 }
 
 let assessments;
 let programs;
+let states;
 
-const processAssessmentData = (raw) => {};
-const processProgramData = (raw) => {};
+const init = () => {
+  states = {};
+  for (let stateCode in STATES) {
+    states[stateCode] = new State(stateCode, STATES[stateCode]);
+  }
+};
+
+const processAssessmentData = (raw) => {
+  assessments = {};
+  const assessmentBlocks = raw.split('\n\n\n');
+  for (let block of assessmentBlocks) {
+    const keyValues = block.split('\n');
+    let id = null;
+    let name = null;
+    let approvingStates = [];
+    for (let keyValue of keyValues) {
+      const [key, value] = keyValue.split('|');
+      if (key === 'id') {
+        id = value.trim();
+      } else if (key === 'name') {
+        name = value.trim();
+      } else if (key === 'states') {
+        approvingStates = value.trim().split(',');
+        for (let stateCode of approvingStates) {
+          console.log(stateCode);
+          states[stateCode].approvedAssessments.push(id);
+        }
+      }
+    }
+    const newAssessment = new Assessment(id, name);
+    newAssessment.approvingStates = approvingStates;
+    assessments[id] = newAssessment;
+  }
+};
+
+const processProgramData = (raw) => {
+  programs = {};
+  const programBlocks = raw.split('\n\n\n');
+  for (let block of programBlocks) {
+    const keyValues = block.split('\n');
+    let id = null;
+    let name = null;
+    let approvingStates = [];
+    for (let keyValue of keyValues) {
+      const [key, value] = keyValue.split('|');
+      if (key === 'id') {
+        id = value.trim();
+      } else if (key === 'name') {
+        name = value.trim();
+      } else if (key === 'states') {
+        approvingStates = value.trim().split(',');
+        for (let stateCode of approvingStates) {
+          console.log(stateCode);
+          states[stateCode].approvedPrograms.push(id);
+        }
+      }
+    }
+    const newProgram = new Program(id, name);
+    newProgram.approvingStates = approvingStates;
+    programs[id] = newProgram;
+  }
+};
 
 let stateEls = [];
 
 const HIGHLIGHT_CLASS = "highlight";
-const POPUP_ANCHOR_OFFSET = 40;
-const POPUP_WIDTH = 300;
-const POPUP_HEIGHT = 300;
+const POPUP_ANCHOR_OFFSET = 1;
+const POPUP_WIDTH = 400;
+const POPUP_HEIGHT = 400;
 const POPUP_WINDOW_SAFETY_PADDING = 20;
 
 const isStateElement = (el) => {
@@ -107,12 +179,21 @@ const onMapHover = (e) => {
   state.classList.add(HIGHLIGHT_CLASS);
 };
 
-const getPopupTitle = (id) => {
-  for (let stateId in STATES) {
-    if (stateId.toLowerCase() === id) {
-      return STATES[stateId];
-    }
-  }
+const getPopupTitle = (stateCode) => {
+  return '<h1>' + states[stateCode].name + '</h1>';
+};
+
+const formatPopupContent = (stateCode) => {
+  const approvedAssessments = states[stateCode].approvedAssessments;
+  const approvedPrograms = states[stateCode].approvedPrograms;
+
+  let output = '';
+  output += getPopupTitle(stateCode);
+  output += '<h2>Approved assessments</h2>';
+  output += approvedAssessments.join(' ');
+  output += '<h2>Approved programs</h2>';
+  output += approvedPrograms.join(' ');
+  return output;
 };
 
 const showPopup = (show, clientX, clientY, id) => {
@@ -137,15 +218,14 @@ const showPopup = (show, clientX, clientY, id) => {
       y = clientY + POPUP_ANCHOR_OFFSET;
     }
 
-    let assessmentData;
-    let programData;
-
     el.style.top = "" + y + "px";
     el.style.left = "" + x + "px";
     el.style.width = POPUP_WIDTH + "px";
     el.style.height = POPUP_HEIGHT + "px";
 
-    el.innerHTML = getPopupTitle(id) + "<br/><br/>";
+    const stateCode = id.toUpperCase();
+    console.log('Showing popup for ' + stateCode);
+    el.innerHTML = formatPopupContent(stateCode);
   }
 };
 
@@ -164,13 +244,12 @@ const onMapLoad = async () => {
   const programResponse = await fetch("data/programs.txt");
   const programData = await programResponse.text();
 
-  processAssessmentData();
-  processProgramData();
-
-  console.log(programData);
-  console.log(assessmentData);
+  processAssessmentData(assessmentData);
+  processProgramData(programData);
 
   mapEl.innerHTML = svgData;
   processMap(mapEl);
-  mapEl.addEventListener("mouseover", onMapHover);
+  mapEl.addEventListener("mousemove", onMapHover);
 };
+
+init();

@@ -30,12 +30,12 @@ states|CO,DC,TN,OH
 
 id|BW
 name|Benchmark Workshop
-states|CO,DC,AR,OK,
+states|CO,DC,AR,OK
 
 
 id|OC
 name|Open Court (2016)
-states|CO,CT,AR,
+states|CO,CT,AR
 
 
 id|SL
@@ -50,7 +50,7 @@ states|CT,OH
 
 id|CC
 name|Center for the Collaborative Classroom
-states|CO,AR,
+states|CO,AR
 
 
 id|ZB
@@ -60,7 +60,7 @@ states|CO,AR
 
 id|RM
 name|Reading Mastery Transformations (2021)
-states|CO,
+states|CO
 
 
 id|OE
