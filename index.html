@@ -9,8 +9,16 @@
       }
       body {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         font-family: Arial;
+        height: 100vh;
+        margin: 0;
+        padding: 1ex;
+      }
+      #main {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
         gap: 3ex;
       }
       #map {
@@ -19,7 +27,16 @@
         text-align: center;
         width: 100%;
       }
+      #header {
+        flex-grow: 0;
+      }
+      #header h1 {
+        text-align: center;
+      }
       #map svg {
+      }
+      #footer {
+        flex-grow: 0;
       }
       .highlight {
         fill: #999 !important;
@@ -37,22 +54,48 @@
         text-align: center;
         z-index: 20;
       }
-      .assessment-pill {
-        background-color: #eee;
+      .pill {
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
         cursor: pointer;
         display: inline-block;
-        border: 1px solid rgba(0, 0, 0, 0.5);
+        margin: 1px;
         padding: 5px;
       }
-      .assessment-pill:hover {
+      .assessment-pill {
+        background-color: #eee;
+      }
+      .state-pill {
+        background-color: #5fe97c;
+      }
+      .assessment-pill {
         background-color: #83b6ff;
+      }
+      .program-pill {
+        background-color: #ffb5b5;
+      }
+      .assessment-pill:hover {
+        background-color: #4885de;
       }
       </style>
     <script src="statesread.js"></script>
   </head>
   <body onload="onMapLoad()">
-    <div id="map">Loading...</div>
-    <div id="details"></div>
-    <div id="popup"></div>
+    <div id="header">
+      <h1>States Read</h1>
+    </div>
+    <div id="main">
+      <div id="map">Loading...</div>
+      <div id="details"></div>
+      <div id="popup"></div>
+    </div>
+    <div id="footer">
+      <div id="legend">
+        <h1>Legend</h1>
+        <div class="pill state-pill">State</div>
+        <div class="pill assessment-pill">Assessment</div>
+        <div class="pill program-pill">Program</div>
+      </div>
+    </div>
   </body>
 </html>

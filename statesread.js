@@ -183,9 +183,15 @@ const getPopupTitle = (stateCode) => {
   return '<h1>' + states[stateCode].name + '</h1>';
 };
 
-const formatSingleAssessmentAnchor = (id) => {
+const formatSingleAssessmentPill = (id) => {
   return `
-    <div class="assessment-pill" onclick="showAssessment('${id}')">${id}</div>
+    <div class="pill assessment-pill" onclick="showAssessment('${id}')">${id}</div>
+  `;
+};
+
+const formatSingleStatePill = (id) => {
+  return `
+    <div class="pill state-pill" onclick="">${id}</div>
   `;
 };
 
@@ -199,7 +205,11 @@ const clearDetails = () => {
 
 const formatAssessmentDetails = (id) => {
   const assessment = assessments[id];
-  return `<h1>${assessment.name}</h1>`;
+  return `
+    <h1>${assessment.name}</h1>
+    <p><b>Approved in: </b>
+    ${assessment.approvingStates.map(formatSingleStatePill).join(' ')}
+  `;
 };
 
 const formatPopupContent = (stateCode) => {
@@ -209,7 +219,7 @@ const formatPopupContent = (stateCode) => {
   return `
    ${getPopupTitle(stateCode)}
    <h2>Approved assessments</h2>
-   ${approvedAssessments.map(formatSingleAssessmentAnchor).join('')}
+   ${approvedAssessments.map(formatSingleAssessmentPill).join('')}
    <h2>Approved programs</h2>
    ${approvedPrograms.join(' ')}`;
 };
