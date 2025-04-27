@@ -106,7 +106,6 @@ const processAssessmentData = (raw) => {
       } else if (key === 'states') {
         approvingStates = value.trim().split(',');
         for (let stateCode of approvingStates) {
-          console.log(stateCode);
           states[stateCode].approvedAssessments.push(id);
         }
       }
@@ -134,7 +133,6 @@ const processProgramData = (raw) => {
       } else if (key === 'states') {
         approvingStates = value.trim().split(',');
         for (let stateCode of approvingStates) {
-          console.log(stateCode);
           states[stateCode].approvedPrograms.push(id);
         }
       }
@@ -218,7 +216,7 @@ const formatAssessmentDetails = (id) => {
   const assessment = assessments[id];
   return `
     <h1 class="assessment">${assessment.name}</h1>
-    <p><b>Approved in: </b>
+    <p><b>Approved in ${assessment.approvingStates.length} states: </b>
     ${assessment.approvingStates.map(formatSingleStatePill).join(' ')}
   `;
 };
@@ -227,7 +225,7 @@ const formatProgramDetails = (id) => {
   const program = programs[id];
   return `
     <h1 class="program">${program.name}</h1>
-    <p><b>Approved in: </b>
+    <p><b>Approved in ${program.approvingStates.length} states: </b>
     ${program.approvingStates.map(formatSingleStatePill).join(' ')}
   `;
 };
