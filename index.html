@@ -8,9 +8,13 @@
         box-sizing: border-box;
       }
       body {
+        display: flex;
+        flex-direction: row;
         font-family: Arial;
+        gap: 3ex;
       }
       #map {
+        flex-basis: 50%;
         height: 80vh;
         text-align: center;
         width: 100%;
@@ -19,6 +23,9 @@
       }
       .highlight {
         fill: #999 !important;
+      }
+      #details {
+        flex-basis: 50%;
       }
       #popup {
         background-color: white;
@@ -30,11 +37,22 @@
         text-align: center;
         z-index: 20;
       }
-    </style>
+      .assessment-pill {
+        background-color: #eee;
+        cursor: pointer;
+        display: inline-block;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        padding: 5px;
+      }
+      .assessment-pill:hover {
+        background-color: #83b6ff;
+      }
+      </style>
     <script src="statesread.js"></script>
   </head>
   <body onload="onMapLoad()">
     <div id="map">Loading...</div>
+    <div id="details"></div>
     <div id="popup"></div>
   </body>
 </html>

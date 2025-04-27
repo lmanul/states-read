@@ -183,17 +183,40 @@ const getPopupTitle = (stateCode) => {
   return '<h1>' + states[stateCode].name + '</h1>';
 };
 
+const formatSingleAssessmentAnchor = (id) => {
+  return `
+    <div class="assessment-pill" onclick="showAssessment('${id}')">${id}</div>
+  `;
+};
+
+const setDetails = (markup) => {
+  document.getElementById('details').innerHTML = markup;
+};
+
+const clearDetails = () => {
+  setDetails('');
+};
+
+const formatAssessmentDetails = (id) => {
+  const assessment = assessments[id];
+  return `<h1>${assessment.name}</h1>`;
+};
+
 const formatPopupContent = (stateCode) => {
   const approvedAssessments = states[stateCode].approvedAssessments;
   const approvedPrograms = states[stateCode].approvedPrograms;
 
-  let output = '';
-  output += getPopupTitle(stateCode);
-  output += '<h2>Approved assessments</h2>';
-  output += approvedAssessments.join(' ');
-  output += '<h2>Approved programs</h2>';
-  output += approvedPrograms.join(' ');
-  return output;
+  return `
+   ${getPopupTitle(stateCode)}
+   <h2>Approved assessments</h2>
+   ${approvedAssessments.map(formatSingleAssessmentAnchor).join('')}
+   <h2>Approved programs</h2>
+   ${approvedPrograms.join(' ')}`;
+};
+
+const showAssessment = (id) => {
+  clearDetails();
+  setDetails(formatAssessmentDetails(id));
 };
 
 const showPopup = (show, clientX, clientY, id) => {
@@ -224,7 +247,6 @@ const showPopup = (show, clientX, clientY, id) => {
     el.style.height = POPUP_HEIGHT + "px";
 
     const stateCode = id.toUpperCase();
-    console.log('Showing popup for ' + stateCode);
     el.innerHTML = formatPopupContent(stateCode);
   }
 };
