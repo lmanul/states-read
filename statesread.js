@@ -75,6 +75,7 @@ class State {
     this.name = name;
     this.approvedAssessments = [];
     this.approvedPrograms = [];
+    this.element = null;
   }
 }
 
@@ -143,8 +144,7 @@ const processProgramData = (raw) => {
   }
 };
 
-let stateEls = [];
-
+const HOVER_CLASS = "hover";
 const HIGHLIGHT_CLASS = "highlight";
 const POPUP_ANCHOR_OFFSET = 1;
 const POPUP_WIDTH = 400;
@@ -156,30 +156,47 @@ const isStateElement = (el) => {
   return id !== "" && stateCodes.includes(id.toUpperCase());
 };
 
-const clearStateHighlight = () => {
+const clearStateHighlights = () => {
   let currentlyHighlighted = document.getElementsByClassName(HIGHLIGHT_CLASS);
-  if (currentlyHighlighted.length > 0) {
+  while (currentlyHighlighted.length > 0) {
     for (let i = 0; i < currentlyHighlighted.length; i++) {
       currentlyHighlighted[i].classList.remove(HIGHLIGHT_CLASS);
+    }
+    currentlyHighlighted = document.getElementsByClassName(HIGHLIGHT_CLASS);
+  }
+};
+
+const clearStateHover = () => {
+  let currentlyHovered = document.getElementsByClassName(HOVER_CLASS);
+  if (currentlyHovered.length > 0) {
+    for (let i = 0; i < currentlyHovered.length; i++) {
+      currentlyHovered[i].classList.remove(HOVER_CLASS);
     }
   }
 };
 
+const highlightStates = (stateCodes) => {
+  clearStateHighlights();
+  for (let stateCode of stateCodes) {
+    states[stateCode].element.classList.add(HIGHLIGHT_CLASS);
+  }
+};
+
 const onMapHover = (e) => {
-  if (!stateEls.length) {
+  if (!states['CA'].element) {
     // No data yet.
     return;
   }
   if (!isStateElement(e.target)) {
     showPopup(false);
-    clearStateHighlight();
+    clearStateHover();
     return;
   }
   let id = e.target.getAttribute("id");
   const state = e.target;
-  clearStateHighlight();
+  clearStateHover();
   showPopup(true, e.clientX, e.clientY, id);
-  state.classList.add(HIGHLIGHT_CLASS);
+  state.classList.add(HOVER_CLASS);
 };
 
 const getPopupTitle = (stateCode) => {
@@ -244,11 +261,17 @@ const formatPopupContent = (stateCode) => {
 
 const showAssessment = (id) => {
   clearDetails();
+  const assessment = assessments[id];
+  highlightStates(assessment.approvingStates);
+
   setDetails(formatAssessmentDetails(id));
 };
 
 const showProgram = (id) => {
   clearDetails();
+  const program = programs[id];
+  highlightStates(program.approvingStates);
+
   setDetails(formatProgramDetails(id));
 };
 
@@ -286,7 +309,20 @@ const showPopup = (show, clientX, clientY, id) => {
 
 const processMap = (mapEl) => {
   const allPaths = [...mapEl.querySelectorAll("path")];
-  stateEls = allPaths.filter((p) => isStateElement(p));
+  const stateEls = allPaths.filter((p) => isStateElement(p));
+  for (let stateEl of stateEls) {
+    states[stateEl.getAttribute('id').toUpperCase()].element = stateEl;
+  }
+};
+
+const elementIsInMap = (el) => {
+  while (el !== document.body) {
+    if (el.getAttribute('id') === 'map-container') {
+      return true;
+    }
+    el = el.parentElement;
+  }
+  return false;
 };
 
 const onMapLoad = async () => {
@@ -304,7 +340,13 @@ const onMapLoad = async () => {
 
   mapEl.innerHTML = svgData;
   processMap(mapEl);
-  mapEl.addEventListener("mousemove", onMapHover);
+  mapEl.addEventListener('mousemove', onMapHover);
+  document.body.addEventListener('mousemove', (e) => {
+    if (!elementIsInMap(e.target)) {
+      clearStateHover();
+      showPopup(false);
+    }
+  });
 };
 
 init();
