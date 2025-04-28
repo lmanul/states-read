@@ -92,20 +92,20 @@ const init = () => {
 
 const processAssessmentData = (raw) => {
   assessments = {};
-  const assessmentBlocks = raw.split('\n\n\n');
+  const assessmentBlocks = raw.split("\n\n\n");
   for (let block of assessmentBlocks) {
-    const keyValues = block.split('\n');
+    const keyValues = block.split("\n");
     let id = null;
     let name = null;
     let approvingStates = [];
     for (let keyValue of keyValues) {
-      const [key, value] = keyValue.split('|');
-      if (key === 'id') {
+      const [key, value] = keyValue.split("|");
+      if (key === "id") {
         id = value.trim();
-      } else if (key === 'name') {
+      } else if (key === "name") {
         name = value.trim();
-      } else if (key === 'states') {
-        approvingStates = value.trim().split(',');
+      } else if (key === "states") {
+        approvingStates = value.trim().split(",");
         for (let stateCode of approvingStates) {
           states[stateCode].approvedAssessments.push(id);
         }
@@ -119,20 +119,20 @@ const processAssessmentData = (raw) => {
 
 const processProgramData = (raw) => {
   programs = {};
-  const programBlocks = raw.split('\n\n\n');
+  const programBlocks = raw.split("\n\n\n");
   for (let block of programBlocks) {
-    const keyValues = block.split('\n');
+    const keyValues = block.split("\n");
     let id = null;
     let name = null;
     let approvingStates = [];
     for (let keyValue of keyValues) {
-      const [key, value] = keyValue.split('|');
-      if (key === 'id') {
+      const [key, value] = keyValue.split("|");
+      if (key === "id") {
         id = value.trim();
-      } else if (key === 'name') {
+      } else if (key === "name") {
         name = value.trim();
-      } else if (key === 'states') {
-        approvingStates = value.trim().split(',');
+      } else if (key === "states") {
+        approvingStates = value.trim().split(",");
         for (let stateCode of approvingStates) {
           states[stateCode].approvedPrograms.push(id);
         }
@@ -183,7 +183,7 @@ const highlightStates = (stateCodes) => {
 };
 
 const onMapHover = (e) => {
-  if (!states['CA'].element) {
+  if (!states["CA"].element) {
     // No data yet.
     return;
   }
@@ -200,7 +200,7 @@ const onMapHover = (e) => {
 };
 
 const getPopupTitle = (stateCode) => {
-  return '<h1>' + states[stateCode].name + '</h1>';
+  return "<h1>" + states[stateCode].name + "</h1>";
 };
 
 const formatSingleAssessmentPill = (id) => {
@@ -222,11 +222,11 @@ const formatSingleStatePill = (id) => {
 };
 
 const setDetails = (markup) => {
-  document.getElementById('details').innerHTML = markup;
+  document.getElementById("details").innerHTML = markup;
 };
 
 const clearDetails = () => {
-  setDetails('');
+  setDetails("");
 };
 
 const formatAssessmentDetails = (id) => {
@@ -234,7 +234,7 @@ const formatAssessmentDetails = (id) => {
   return `
     <h1 class="assessment">${assessment.name}</h1>
     <p><b>Approved in ${assessment.approvingStates.length} states: </b>
-    ${assessment.approvingStates.map(formatSingleStatePill).join(' ')}
+    ${assessment.approvingStates.map(formatSingleStatePill).join(" ")}
   `;
 };
 
@@ -243,7 +243,7 @@ const formatProgramDetails = (id) => {
   return `
     <h1 class="program">${program.name}</h1>
     <p><b>Approved in ${program.approvingStates.length} states: </b>
-    ${program.approvingStates.map(formatSingleStatePill).join(' ')}
+    ${program.approvingStates.map(formatSingleStatePill).join(" ")}
   `;
 };
 
@@ -254,9 +254,9 @@ const formatPopupContent = (stateCode) => {
   return `
    ${getPopupTitle(stateCode)}
    <h2 class="assessment">Approved assessments</h2>
-   ${approvedAssessments.map(formatSingleAssessmentPill).join('')}
+   ${approvedAssessments.map(formatSingleAssessmentPill).join("")}
    <h2 class="program">Approved programs</h2>
-   ${approvedPrograms.map(formatSingleProgramPill).join(' ')}`;
+   ${approvedPrograms.map(formatSingleProgramPill).join(" ")}`;
 };
 
 const showAssessment = (id) => {
@@ -311,13 +311,13 @@ const processMap = (mapEl) => {
   const allPaths = [...mapEl.querySelectorAll("path")];
   const stateEls = allPaths.filter((p) => isStateElement(p));
   for (let stateEl of stateEls) {
-    states[stateEl.getAttribute('id').toUpperCase()].element = stateEl;
+    states[stateEl.getAttribute("id").toUpperCase()].element = stateEl;
   }
 };
 
 const elementIsInMap = (el) => {
   while (el !== document.body) {
-    if (el.getAttribute('id') === 'map-container') {
+    if (el.getAttribute("id") === "map-container") {
       return true;
     }
     el = el.parentElement;
@@ -340,8 +340,8 @@ const onMapLoad = async () => {
 
   mapEl.innerHTML = svgData;
   processMap(mapEl);
-  mapEl.addEventListener('mousemove', onMapHover);
-  document.body.addEventListener('mousemove', (e) => {
+  mapEl.addEventListener("mousemove", onMapHover);
+  document.body.addEventListener("mousemove", (e) => {
     if (!elementIsInMap(e.target)) {
       clearStateHover();
       showPopup(false);
