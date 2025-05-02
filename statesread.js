@@ -311,8 +311,14 @@ const processMap = (mapEl) => {
   const allPaths = [...mapEl.querySelectorAll("path")];
   const stateEls = allPaths.filter((p) => isStateElement(p));
   for (let stateEl of stateEls) {
-    states[stateEl.getAttribute("id").toUpperCase()].element = stateEl;
+    const stateCode = stateEl.getAttribute("id");
+    states[stateCode.toUpperCase()].element = stateEl;
   }
+  const svgEl = document.querySelector('svg');
+  const assessmentText = svgEl.querySelector('#wa-assessment-text');
+  assessmentText.textContent = '12';
+  const programText = svgEl.querySelector('#wa-program-text');
+  programText.textContent = '34';
 };
 
 const elementIsInMap = (el) => {
