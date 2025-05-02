@@ -678,38 +678,44 @@
      fill="none"
      d="m 215,493 v 55 l 36,45 m -251,-168 h 147 l 68,68 h 85 l 54,54 v 46"
      id="path1478" />
-  <circle
-     style="color:#000000;overflow:visible;opacity:1;fill:#0057e1;stroke-width:0.783841;fill-opacity:1"
-     id="wa-assessment-circle"
-     r="7.3999724"
-     cy="48.392509"
-     cx="109.35494" />
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:8.29933px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.207483px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="109.43273"
-     y="51.602707"
-     id="text1205"><tspan
-       sodipodi:role="line"
-       id="wa-assessment-text"
+  <g
+     id="g462">
+    <circle
+       style="color:#000000;overflow:visible;opacity:1;fill:#0057e1;stroke-width:0.783841;fill-opacity:1"
+       id="wa-assessment-circle"
+       r="7.3999724"
+       cy="48.392509"
+       cx="109.35494" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.29933px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.207483px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="109.43273"
        y="51.602707"
-       style="text-align:center;text-anchor:middle;stroke-width:0.207483px;fill:#ffffff;fill-opacity:1">WA</tspan></text>
-  <circle
-     style="color:#000000;overflow:visible;opacity:1;fill:#ca0000;stroke-width:0.783841;fill-opacity:1"
-     id="wa-program-circle"
-     r="7.3999724"
-     cy="52.475239"
-     cx="127.33784" />
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:8.29933px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.207483px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="127.41563"
-     y="55.685436"
-     id="text1205-6"><tspan
-       sodipodi:role="line"
-       id="wa-assessment-text"
+       id="text1205"><tspan
+         sodipodi:role="line"
+         id="wa-assessment-text"
+         x="109.43273"
+         y="51.602707"
+         style="text-align:center;text-anchor:middle;stroke-width:0.207483px;fill:#ffffff;fill-opacity:1">WA</tspan></text>
+  </g>
+  <g
+     id="g457">
+    <circle
+       style="color:#000000;overflow:visible;opacity:1;fill:#ca0000;stroke-width:0.783841;fill-opacity:1"
+       id="wa-program-circle"
+       r="7.3999724"
+       cy="52.475239"
+       cx="127.33784" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.29933px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.207483px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="127.41563"
        y="55.685436"
-       style="text-align:center;text-anchor:middle;stroke-width:0.207483px;fill:#ffffff;fill-opacity:1">WA</tspan></text>
+       id="text1205-6"><tspan
+         sodipodi:role="line"
+         id="wa-program-text"
+         x="127.41563"
+         y="55.685436"
+         style="text-align:center;text-anchor:middle;stroke-width:0.207483px;fill:#ffffff;fill-opacity:1">WA</tspan></text>
+  </g>
 </svg>
