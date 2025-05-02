@@ -325,12 +325,16 @@ const processMap = (mapEl) => {
       svgEl.querySelector('#' + stateCode + '-assessment-circle').style.display = 'none';
       svgEl.querySelector('#' + stateCode + '-assessment-text').textContent = '';
     }
+    svgEl.querySelector('#' + stateCode + '-assessment-circle').style.pointerEvents = 'none';
+    svgEl.querySelector('#' + stateCode + '-assessment-text').style.pointerEvents = 'none';
     if (programCount > 0) {
       svgEl.querySelector('#' + stateCode + '-program-text').textContent = programCount;
     } else {
       svgEl.querySelector('#' + stateCode + '-program-circle').style.display = 'none';
       svgEl.querySelector('#' + stateCode + '-program-text').textContent = '';
     }
+    svgEl.querySelector('#' + stateCode + '-program-circle').style.pointerEvents = 'none';
+    svgEl.querySelector('#' + stateCode + '-program-text').style.pointerEvents = 'none';
   }
 
   const assessmentText = svgEl.querySelector('#wa-assessment-text');
