@@ -310,15 +310,34 @@ const showPopup = (show, clientX, clientY, id) => {
 const processMap = (mapEl) => {
   const allPaths = [...mapEl.querySelectorAll("path")];
   const stateEls = allPaths.filter((p) => isStateElement(p));
+  const svgEl = document.querySelector('svg');
   for (let stateEl of stateEls) {
     const stateCode = stateEl.getAttribute("id");
-    states[stateCode.toUpperCase()].element = stateEl;
+    const stateCodeUpper = stateCode.toUpperCase();
+    states[stateCodeUpper].element = stateEl;
+
+    const assessmentCount = states[stateCodeUpper].approvedAssessments.length;
+    const programCount = states[stateCodeUpper].approvedPrograms.length;
+
+    if (assessmentCount > 0) {
+      svgEl.querySelector('#' + stateCode + '-assessment-text').textContent = assessmentCount;
+    } else {
+      svgEl.querySelector('#' + stateCode + '-assessment-circle').style.display = 'none';
+      svgEl.querySelector('#' + stateCode + '-assessment-text').textContent = '';
+    }
+    if (programCount > 0) {
+      svgEl.querySelector('#' + stateCode + '-program-text').textContent = programCount;
+    } else {
+      svgEl.querySelector('#' + stateCode + '-program-circle').style.display = 'none';
+      svgEl.querySelector('#' + stateCode + '-program-text').textContent = '';
+    }
   }
-  const svgEl = document.querySelector('svg');
+
   const assessmentText = svgEl.querySelector('#wa-assessment-text');
   assessmentText.textContent = '12';
   const programText = svgEl.querySelector('#wa-program-text');
   programText.textContent = '34';
+
 };
 
 const elementIsInMap = (el) => {
