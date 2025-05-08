@@ -1,25 +1,14 @@
-import { stateNames, stateCodes } from './states.js';
-import { processAssessmentData } from './assessments.js';
-import { processProgramData } from './programs.js';
-
-class State {
-  constructor(id, name) {
-    this.id = id;
-    this.name = name;
-    this.approvedAssessments = [];
-    this.approvedPrograms = [];
-    this.element = null;
-  }
-}
-
-let states;
+import { stateNames, stateCodes } from "./states.js";
+import {
+  formatSingleAssessmentPill,
+  processAssessmentData,
+} from "./assessments.js";
+import { formatSingleProgramPill, processProgramData } from "./programs.js";
+import { init as statesInit, states } from "./states.js";
 
 const init = () => {
+  statesInit();
   document.body.onload = onMapLoad;
-  states = {};
-  for (let stateCode in stateNames) {
-    states[stateCode] = new State(stateCode, stateNames[stateCode]);
-  }
 };
 
 const HOVER_CLASS = "hover";
@@ -33,7 +22,6 @@ const isStateElement = (el) => {
   return id !== "" && stateCodes.includes(id.toUpperCase());
 };
 
-
 const clearStateHover = () => {
   let currentlyHovered = document.getElementsByClassName(HOVER_CLASS);
   if (currentlyHovered.length > 0) {
@@ -42,7 +30,6 @@ const clearStateHover = () => {
     }
   }
 };
-
 
 const onMapHover = (e) => {
   if (!states["CA"].element) {
@@ -65,19 +52,6 @@ const getPopupTitle = (stateCode) => {
   return "<h1>" + states[stateCode].name + "</h1>";
 };
 
-const formatSingleAssessmentPill = (id) => {
-  return `
-    <div class="pill assessment-pill" onclick="showAssessment('${id}')">${id}</div>
-  `;
-};
-
-const formatSingleProgramPill = (id) => {
-  return `
-    <div class="pill program-pill" onclick="showProgram('${id}')">${id}</div>
-  `;
-};
-
-
 const formatPopupContent = (stateCode) => {
   const approvedAssessments = states[stateCode].approvedAssessments;
   const approvedPrograms = states[stateCode].approvedPrograms;
@@ -89,7 +63,6 @@ const formatPopupContent = (stateCode) => {
    <h2 class="program">Approved programs</h2>
    ${approvedPrograms.map(formatSingleProgramPill).join(" ")}`;
 };
-
 
 const showPopup = (show, clientX, clientY, id) => {
   const el = document.getElementById("popup");
@@ -126,7 +99,7 @@ const showPopup = (show, clientX, clientY, id) => {
 const processMap = (mapEl) => {
   const allPaths = [...mapEl.querySelectorAll("path")];
   const stateEls = allPaths.filter((p) => isStateElement(p));
-  const svgEl = document.querySelector('svg');
+  const svgEl = document.querySelector("svg");
   for (let stateEl of stateEls) {
     const stateCode = stateEl.getAttribute("id");
     const stateCodeUpper = stateCode.toUpperCase();
@@ -136,28 +109,40 @@ const processMap = (mapEl) => {
     const programCount = states[stateCodeUpper].approvedPrograms.length;
 
     if (assessmentCount > 0) {
-      svgEl.querySelector('#' + stateCode + '-assessment-text').textContent = assessmentCount;
+      svgEl.querySelector("#" + stateCode + "-assessment-text").textContent =
+        assessmentCount;
     } else {
-      svgEl.querySelector('#' + stateCode + '-assessment-circle').style.display = 'none';
-      svgEl.querySelector('#' + stateCode + '-assessment-text').textContent = '';
+      svgEl.querySelector(
+        "#" + stateCode + "-assessment-circle"
+      ).style.display = "none";
+      svgEl.querySelector("#" + stateCode + "-assessment-text").textContent =
+        "";
     }
-    svgEl.querySelector('#' + stateCode + '-assessment-circle').style.pointerEvents = 'none';
-    svgEl.querySelector('#' + stateCode + '-assessment-text').style.pointerEvents = 'none';
+    svgEl.querySelector(
+      "#" + stateCode + "-assessment-circle"
+    ).style.pointerEvents = "none";
+    svgEl.querySelector(
+      "#" + stateCode + "-assessment-text"
+    ).style.pointerEvents = "none";
     if (programCount > 0) {
-      svgEl.querySelector('#' + stateCode + '-program-text').textContent = programCount;
+      svgEl.querySelector("#" + stateCode + "-program-text").textContent =
+        programCount;
     } else {
-      svgEl.querySelector('#' + stateCode + '-program-circle').style.display = 'none';
-      svgEl.querySelector('#' + stateCode + '-program-text').textContent = '';
+      svgEl.querySelector("#" + stateCode + "-program-circle").style.display =
+        "none";
+      svgEl.querySelector("#" + stateCode + "-program-text").textContent = "";
     }
-    svgEl.querySelector('#' + stateCode + '-program-circle').style.pointerEvents = 'none';
-    svgEl.querySelector('#' + stateCode + '-program-text').style.pointerEvents = 'none';
+    svgEl.querySelector(
+      "#" + stateCode + "-program-circle"
+    ).style.pointerEvents = "none";
+    svgEl.querySelector("#" + stateCode + "-program-text").style.pointerEvents =
+      "none";
   }
 
-  const assessmentText = svgEl.querySelector('#wa-assessment-text');
-  assessmentText.textContent = '12';
-  const programText = svgEl.querySelector('#wa-program-text');
-  programText.textContent = '34';
-
+  const assessmentText = svgEl.querySelector("#wa-assessment-text");
+  assessmentText.textContent = "12";
+  const programText = svgEl.querySelector("#wa-program-text");
+  programText.textContent = "34";
 };
 
 const elementIsInMap = (el) => {
@@ -175,9 +160,9 @@ const onMapLoad = async () => {
   const response = await fetch("states.svg");
   const svgData = await response.text();
 
-  const assessmentResponse = await fetch("data/assessments.txt");
+  const assessmentResponse = await fetch("data/assessments.txt", {cache: 'no-store'});
   const assessmentData = await assessmentResponse.text();
-  const programResponse = await fetch("data/programs.txt");
+  const programResponse = await fetch("data/programs.txt", {cache: 'no-store'});
   const programData = await programResponse.text();
 
   processAssessmentData(assessmentData);
@@ -195,5 +180,3 @@ const onMapLoad = async () => {
 };
 
 init();
-
-window.states = states;

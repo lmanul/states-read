@@ -1,4 +1,10 @@
-import { setDetails, clearDetails, formatSingleStatePill, highlightStates } from "./util.js";
+import {
+  setDetails,
+  clearDetails,
+  formatSingleStatePill,
+  highlightStates,
+} from "./util.js";
+import { states } from "./states.js";
 
 let assessments;
 
@@ -43,6 +49,12 @@ const formatAssessmentDetails = (id) => {
       <h1 class="assessment">${assessment.name}</h1>
       <p><b>Approved in ${assessment.approvingStates.length} states: </b>
       ${assessment.approvingStates.map(formatSingleStatePill).join(" ")}
+    `;
+};
+
+export const formatSingleAssessmentPill = (id) => {
+  return `
+      <div class="pill assessment-pill" onclick="showAssessment('${id}')">${id}</div>
     `;
 };
 

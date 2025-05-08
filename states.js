@@ -1,3 +1,16 @@
+class State {
+  constructor(id, name) {
+    this.id = id;
+    this.name = name;
+    this.approvedAssessments = [];
+    this.approvedPrograms = [];
+    this.element = null;
+  }
+}
+
+
+let states;
+
 const stateNames = {
   AL: "Alabama",
   AK: "Alaska",
@@ -53,7 +66,11 @@ const stateNames = {
 };
 const stateCodes = Object.keys(stateNames);
 
-export {
-    stateNames,
-    stateCodes,
+const init = () => {
+  states = {};
+  for (let stateCode in stateNames) {
+    states[stateCode] = new State(stateCode, stateNames[stateCode]);
+  }
 };
+
+export { init, states, stateNames, stateCodes };

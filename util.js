@@ -1,3 +1,5 @@
+import { states } from "./states.js";
+
 const HIGHLIGHT_CLASS = "highlight";
 
 export const setDetails = (markup) => {

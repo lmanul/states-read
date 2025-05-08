@@ -1,4 +1,10 @@
-import { setDetails, clearDetails, formatSingleStatePill, highlightStates } from "./util.js";
+import {
+  setDetails,
+  clearDetails,
+  formatSingleStatePill,
+  highlightStates,
+} from "./util.js";
+import { states } from "./states.js";
 
 let programs;
 
@@ -27,6 +33,9 @@ export const processProgramData = (raw) => {
       } else if (key === "states") {
         approvingStates = value.trim().split(",");
         for (let stateCode of approvingStates) {
+          if (!stateCode) {
+            continue;
+          }
           states[stateCode].approvedPrograms.push(id);
         }
       }
@@ -43,6 +52,12 @@ const formatProgramDetails = (id) => {
       <h1 class="program">${program.name}</h1>
       <p><b>Approved in ${program.approvingStates.length} states: </b>
       ${program.approvingStates.map(formatSingleStatePill).join(" ")}
+    `;
+};
+
+export const formatSingleProgramPill = (id) => {
+  return `
+      <div class="pill program-pill" onclick="showProgram('${id}')">${id}</div>
     `;
 };
 
