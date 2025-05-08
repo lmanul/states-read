@@ -1,73 +1,125 @@
-id|HM
-name|HMH-Into Reading
+id|IR
+name|Into Reading
+company|HMH
 states|CO,CT,TN,AR,NY,OH
+aligned|me
+feasible|me
 
 
 id|WO
-name|Wonders (McGraw-Hill 2017, 2020)
+name|Wonders (2017, 2020)
+company|McGraw-Hill
 states|CO,CT,DC,TN,AR,OH
+aligned|me
+feasible|me
 
 
 id|EI
 name|EL Imagine Learning (LearnZillion & Open Up)
+company|
 states|CO,CT,TN,NY,OH
+aligned|
+feasible|
 
 
 id|AM
-name|Amplify CKLA 2017
+name|CKLA 2017
+company|Amplify
 states|CO,CT,TN,AR,OH
+aligned|me
+feasible|me
 
 
 id|WW
 name|Wit & Wisdom
+company|
 states|CT,TN,AR,NY,OH
+aligned|me
+feasible|me
 
 
 id|BA
 name|Benchmark Advance
+company|
 states|CO,DC,TN,OH
+aligned|me
+feasible|me
+
+
+id|BE
+name|Benchmark Workshop
+company|
+states|CO,DC,AR,OK
+aligned|
+feasible|
 
 
 id|BW
-name|Benchmark Workshop
-states|CO,DC,AR,OK
-
+name|Bookworms
+company|
+states|
+aligned|pa
+feasible|ne
 
 id|OC
 name|Open Court (2016)
+company|
 states|CO,CT,AR
+aligned|me
+feasible|me
 
 
 id|SL
-name|Savvas Learning-myView Literacy 2020
+name|myView Literacy 2020
+company|Savvas Learning
 states|CO,CT,OH
+aligned|me
+feasible|me
 
 
 id|AR
-name|American Reading Company -ARC Core (2017)
+name|ARC Core (2017)
+company|American Reading Company
 states|CT,OH
+aligned|me
+feasible|me
 
 
 id|CC
 name|Center for the Collaborative Classroom
+company|
 states|CO,AR
+aligned|
+feasible|
 
 
 id|ZB
 name|Zaner Bloser Superkids reading Program (2017)
+company|
 states|CO,AR
+aligned|
+feasible|
 
 
 id|RM
 name|Reading Mastery Transformations (2021)
+company|
 states|CO
+aligned|
+feasible|
 
 
 id|OE
 name|Our EL Education K-5 ELA
+company|
 states|OH
+aligned|me
+feasible|me
 
 
 id|FP
 name|Fishtank Plus ELA
+company|
 states|OH
+aligned|
+feasible|
