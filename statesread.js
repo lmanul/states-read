@@ -160,9 +160,13 @@ const onMapLoad = async () => {
   const response = await fetch("states.svg");
   const svgData = await response.text();
 
-  const assessmentResponse = await fetch("data/assessments.txt", {cache: 'no-store'});
+  const assessmentResponse = await fetch("data/assessments.txt", {
+    cache: "no-store",
+  });
   const assessmentData = await assessmentResponse.text();
-  const programResponse = await fetch("data/programs.txt", {cache: 'no-store'});
+  const programResponse = await fetch("data/programs.txt", {
+    cache: "no-store",
+  });
   const programData = await programResponse.text();
 
   processAssessmentData(assessmentData);

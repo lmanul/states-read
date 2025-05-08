@@ -13,6 +13,7 @@ class Program {
     this.id = id;
     this.name = name;
     this.approvingStates = [];
+    this.company = null;
   }
 }
 
@@ -21,28 +22,29 @@ export const processProgramData = (raw) => {
   const programBlocks = raw.split("\n\n\n");
   for (let block of programBlocks) {
     const keyValues = block.split("\n");
+    const program = new Program('noid', 'Unknown Program');
     let id = null;
-    let name = null;
-    let approvingStates = [];
     for (let keyValue of keyValues) {
-      const [key, value] = keyValue.split("|");
+      let [key, value] = keyValue.split("|").map(a => a.trim());
       if (key === "id") {
-        id = value.trim();
+        id = value;
+        program.id = id;
       } else if (key === "name") {
-        name = value.trim();
+        program.name = value;
+      } else if (key === 'company') {
+        program.company = value;
       } else if (key === "states") {
-        approvingStates = value.trim().split(",");
+        const approvingStates = value.trim().split(",");
         for (let stateCode of approvingStates) {
           if (!stateCode) {
             continue;
           }
           states[stateCode].approvedPrograms.push(id);
         }
+        program.approvingStates = approvingStates;
       }
     }
-    const newProgram = new Program(id, name);
-    newProgram.approvingStates = approvingStates;
-    programs[id] = newProgram;
+    programs[id] = program;
   }
 };
 
@@ -52,6 +54,8 @@ const formatProgramDetails = (id) => {
       <h1 class="program">${program.name}</h1>
       <p><b>Approved in ${program.approvingStates.length} states: </b>
       ${program.approvingStates.map(formatSingleStatePill).join(" ")}
+      </p>
+      ${program.company ? "<p><b>Company</b>: " + program.company + "</p>" : ''}
     `;
 };
 

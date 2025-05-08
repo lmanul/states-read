@@ -8,7 +8,6 @@ class State {
   }
 }
 
-
 let states;
 
 const stateNames = {

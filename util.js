@@ -1,5 +1,3 @@
-import { states } from "./states.js";
-
 const HIGHLIGHT_CLASS = "highlight";
 
 export const setDetails = (markup) => {
@@ -28,9 +26,9 @@ export const highlightStates = (stateCodes, states) => {
 };
 
 export const formatSingleStatePill = (id) => {
-    return `
+  return `
       <div class="pill state-pill" onclick="">${id}</div>
     `;
-  };
+};
 
-  window.clearStateHighlights = clearStateHighlights;
+window.clearStateHighlights = clearStateHighlights;
