@@ -1,20 +1,6 @@
 import { stateNames, stateCodes } from './states.js';
-
-class Assessment {
-  constructor(id, name) {
-    this.id = id;
-    this.name = name;
-    this.approvingStates = [];
-  }
-}
-
-class Program {
-  constructor(id, name) {
-    this.id = id;
-    this.name = name;
-    this.approvingStates = [];
-  }
-}
+import { processAssessmentData } from './assessments.js';
+import { processProgramData } from './programs.js';
 
 class State {
   constructor(id, name) {
@@ -26,8 +12,6 @@ class State {
   }
 }
 
-let assessments;
-let programs;
 let states;
 
 const init = () => {
@@ -38,62 +22,7 @@ const init = () => {
   }
 };
 
-const processAssessmentData = (raw) => {
-  assessments = {};
-  const assessmentBlocks = raw.split("\n\n\n");
-  for (let block of assessmentBlocks) {
-    const keyValues = block.split("\n");
-    let id = null;
-    let name = null;
-    let approvingStates = [];
-    for (let keyValue of keyValues) {
-      const [key, value] = keyValue.split("|");
-      if (key === "id") {
-        id = value.trim();
-      } else if (key === "name") {
-        name = value.trim();
-      } else if (key === "states") {
-        approvingStates = value.trim().split(",");
-        for (let stateCode of approvingStates) {
-          states[stateCode].approvedAssessments.push(id);
-        }
-      }
-    }
-    const newAssessment = new Assessment(id, name);
-    newAssessment.approvingStates = approvingStates;
-    assessments[id] = newAssessment;
-  }
-};
-
-const processProgramData = (raw) => {
-  programs = {};
-  const programBlocks = raw.split("\n\n\n");
-  for (let block of programBlocks) {
-    const keyValues = block.split("\n");
-    let id = null;
-    let name = null;
-    let approvingStates = [];
-    for (let keyValue of keyValues) {
-      const [key, value] = keyValue.split("|");
-      if (key === "id") {
-        id = value.trim();
-      } else if (key === "name") {
-        name = value.trim();
-      } else if (key === "states") {
-        approvingStates = value.trim().split(",");
-        for (let stateCode of approvingStates) {
-          states[stateCode].approvedPrograms.push(id);
-        }
-      }
-    }
-    const newProgram = new Program(id, name);
-    newProgram.approvingStates = approvingStates;
-    programs[id] = newProgram;
-  }
-};
-
 const HOVER_CLASS = "hover";
-const HIGHLIGHT_CLASS = "highlight";
 const POPUP_ANCHOR_OFFSET = 1;
 const POPUP_WIDTH = 400;
 const POPUP_HEIGHT = 400;
@@ -104,15 +33,6 @@ const isStateElement = (el) => {
   return id !== "" && stateCodes.includes(id.toUpperCase());
 };
 
-const clearStateHighlights = () => {
-  let currentlyHighlighted = document.getElementsByClassName(HIGHLIGHT_CLASS);
-  while (currentlyHighlighted.length > 0) {
-    for (let i = 0; i < currentlyHighlighted.length; i++) {
-      currentlyHighlighted[i].classList.remove(HIGHLIGHT_CLASS);
-    }
-    currentlyHighlighted = document.getElementsByClassName(HIGHLIGHT_CLASS);
-  }
-};
 
 const clearStateHover = () => {
   let currentlyHovered = document.getElementsByClassName(HOVER_CLASS);
@@ -123,12 +43,6 @@ const clearStateHover = () => {
   }
 };
 
-const highlightStates = (stateCodes) => {
-  clearStateHighlights();
-  for (let stateCode of stateCodes) {
-    states[stateCode].element.classList.add(HIGHLIGHT_CLASS);
-  }
-};
 
 const onMapHover = (e) => {
   if (!states["CA"].element) {
@@ -163,37 +77,6 @@ const formatSingleProgramPill = (id) => {
   `;
 };
 
-const formatSingleStatePill = (id) => {
-  return `
-    <div class="pill state-pill" onclick="">${id}</div>
-  `;
-};
-
-const setDetails = (markup) => {
-  document.getElementById("details").innerHTML = markup;
-};
-
-const clearDetails = () => {
-  setDetails("");
-};
-
-const formatAssessmentDetails = (id) => {
-  const assessment = assessments[id];
-  return `
-    <h1 class="assessment">${assessment.name}</h1>
-    <p><b>Approved in ${assessment.approvingStates.length} states: </b>
-    ${assessment.approvingStates.map(formatSingleStatePill).join(" ")}
-  `;
-};
-
-const formatProgramDetails = (id) => {
-  const program = programs[id];
-  return `
-    <h1 class="program">${program.name}</h1>
-    <p><b>Approved in ${program.approvingStates.length} states: </b>
-    ${program.approvingStates.map(formatSingleStatePill).join(" ")}
-  `;
-};
 
 const formatPopupContent = (stateCode) => {
   const approvedAssessments = states[stateCode].approvedAssessments;
@@ -207,21 +90,6 @@ const formatPopupContent = (stateCode) => {
    ${approvedPrograms.map(formatSingleProgramPill).join(" ")}`;
 };
 
-const showAssessment = (id) => {
-  clearDetails();
-  const assessment = assessments[id];
-  highlightStates(assessment.approvingStates);
-
-  setDetails(formatAssessmentDetails(id));
-};
-
-const showProgram = (id) => {
-  clearDetails();
-  const program = programs[id];
-  highlightStates(program.approvingStates);
-
-  setDetails(formatProgramDetails(id));
-};
 
 const showPopup = (show, clientX, clientY, id) => {
   const el = document.getElementById("popup");
@@ -328,5 +196,4 @@ const onMapLoad = async () => {
 
 init();
 
-window.showAssessment = showAssessment;
-window.showProgram = showProgram;
+window.states = states;
