@@ -3,6 +3,7 @@ import {
   clearDetails,
   formatSingleStatePill,
   highlightStates,
+  showKeyValueIfDefined
 } from "./util.js";
 import { states } from "./states.js";
 
@@ -21,25 +22,25 @@ export const processAssessmentData = (raw) => {
   const assessmentBlocks = raw.split("\n\n");
   for (let block of assessmentBlocks) {
     const keyValues = block.split("\n");
-    let id = null;
-    let name = null;
+    const assessment = new Assessment('noid', 'Unknown Assessment');
     let approvingStates = [];
     for (let keyValue of keyValues) {
-      const [key, value] = keyValue.split("|");
+      const [key, value] = keyValue.split("|").map((a) => a.trim());
       if (key === "id") {
-        id = value.trim();
+        assessment.id = value;
       } else if (key === "name") {
-        name = value.trim();
+        assessment.name = value;
+      } else if (key === "time required") {
+        assessment.timeRequired = parseInt(value);
       } else if (key === "states") {
         approvingStates = value.trim().split(",");
         for (let stateCode of approvingStates) {
-          states[stateCode].approvedAssessments.push(id);
+          states[stateCode].approvedAssessments.push(assessment.id);
         }
+        assessment.approvingStates = approvingStates;
       }
     }
-    const newAssessment = new Assessment(id, name);
-    newAssessment.approvingStates = approvingStates;
-    assessments[id] = newAssessment;
+    assessments[assessment.id] = assessment;
   }
 };
 

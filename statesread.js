@@ -12,6 +12,7 @@ const init = () => {
 };
 
 const HOVER_CLASS = "hover";
+const SELECTED_CLASS = "selected";
 
 const isStateElement = (el) => {
   const id = el.getAttribute("id");
@@ -23,6 +24,15 @@ const clearStateHover = () => {
   if (currentlyHovered.length > 0) {
     for (let i = 0; i < currentlyHovered.length; i++) {
       currentlyHovered[i].classList.remove(HOVER_CLASS);
+    }
+  }
+};
+
+const clearStateSelected = () => {
+  let currentlySelected = document.getElementsByClassName(SELECTED_CLASS);
+  if (currentlySelected.length > 0) {
+    for (let i = 0; i < currentlySelected.length; i++) {
+      currentlySelected[i].classList.remove(SELECTED_CLASS);
     }
   }
 };
@@ -40,8 +50,9 @@ const onMapClick = (e) => {
   let id = e.target.getAttribute("id");
   const state = e.target;
   clearStateHover();
+  clearStateSelected();
   showPopup(true, e.clientX, e.clientY, id);
-  state.classList.add(HOVER_CLASS);
+  state.classList.add(SELECTED_CLASS);
 };
 
 const getPopupTitle = (stateCode) => {
@@ -153,6 +164,10 @@ const onMapLoad = async () => {
   mapEl.innerHTML = svgData;
   processMap(mapEl);
   mapEl.addEventListener("click", onMapClick);
+  mapEl.addEventListener("mouseover", (e) => {
+    clearStateHover();
+    e.target.classList.add(HOVER_CLASS);
+  });
   document.body.addEventListener("click", (e) => {
     if (!elementIsInMap(e.target)) {
       clearStateHover();

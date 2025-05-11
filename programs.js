@@ -30,7 +30,6 @@ export const processProgramData = (raw) => {
     for (let keyValue of keyValues) {
       let [key, value] = keyValue.split("|").map((a) => a.trim());
       if (key === "id") {
-        id = value;
         program.id = id;
       } else if (key === "name") {
         program.name = value;
@@ -57,12 +56,12 @@ export const processProgramData = (raw) => {
             alert('Sorry I do not know about state "' + stateCode + '"');
             continue;
           }
-          states[stateCode].approvedPrograms.push(id);
+          states[stateCode].approvedPrograms.push(program.id);
         }
         program.approvingStates = approvingStates;
       }
     }
-    programs[id] = program;
+    programs[program.id] = program;
   }
 };
 

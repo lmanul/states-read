@@ -51,6 +51,10 @@ body {
 #controls {
   flex-grow: 0;
 }
+#controls button {
+  cursor: pointer;
+  padding: 1ex;
+}
 #map {
   flex-grow: 0;
 }
@@ -60,6 +64,10 @@ body {
   flex-grow: 0;
 }
 .hover {
+  cursor: pointer;
+  fill: #ffeb98 !important;
+}
+.selected {
   fill: #ffdd4d !important;
 }
 .highlight {
