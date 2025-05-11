@@ -21,6 +21,10 @@ export const clearStateHighlights = () => {
 export const highlightStates = (stateCodes, states) => {
   clearStateHighlights();
   for (let stateCode of stateCodes) {
+    if (!states[stateCode]) {
+      // Be a little defensive.
+      continue;
+    }
     states[stateCode].element.classList.add(HIGHLIGHT_CLASS);
   }
 };
