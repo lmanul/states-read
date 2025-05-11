@@ -13,7 +13,6 @@ time required 1st grade| 90
 available grade levels | K-6
 year of last update | 2022
 
-
 id|WO
 name|Wonders
 company| McGraw Hill Education
@@ -27,7 +26,6 @@ cultural responsiveness| culturally destructive
 time required 1st grade| 60-75
 available grade levels | K-6
 year of last update | 2020
-
 
 id|EI
 name|EL-Imagine Learning
@@ -44,7 +42,6 @@ time required 1st grade| 120-180
 available grade levels | k-8
 year of last update | 2017
 
-
 id|AM
 name|Amplify CKLA
 company| Amplify
@@ -59,7 +56,6 @@ cultural responsiveness| not rated
 time required 1st grade| 90-120
 available grade levels | K-5
 year of last update | 2025
-
 
 id|WW
 name|Wit and Wisdom
@@ -76,7 +72,6 @@ time required 1st grade| 90
 available grade levels | K-5
 year of last update |
 
-
 id|BA
 name|Benchmark Advance
 company| Benchmark Education Company
@@ -91,7 +86,6 @@ cultural responsiveness| not rated
 time required 1st grade| 90
 available grade levels | K-5
 year of last update | 2020
-
 
 id|BE
 name|Benchmark Workshop
@@ -108,7 +102,6 @@ time required 1st grade|
 available grade levels | K-5
 year of last update | unknown
 
-
 id|BW
 name|Bookworms
 company| Open Up Resources
@@ -123,7 +116,6 @@ cultural responsiveness|  not rated
 time required 1st grade| 90
 available grade levels | K-5
 year of last update | 2022
-
 
 id|OC
 name|Open Court
@@ -140,7 +132,6 @@ time required 1st grade| 60-75
 available grade levels | K-6
 year of last update | 2023
 
-
 id|SL
 name|myView Literacy
 company| Savvas Learning
@@ -155,7 +146,6 @@ cultural responsiveness| destructive
 time required 1st grade| 120-180
 available grade levels | K-5
 year of last update | 2025
-
 
 id|AR
 name|ARC Core
@@ -172,7 +162,6 @@ time required 1st grade| 60-140
 available grade levels | K-12
 year of last update | 2017
 
-
 id|BR
 name|Being a Reader
 company| Center for the Collaborative Classroom
@@ -187,7 +176,6 @@ cultural responsiveness|  not rated
 time required 1st grade| 35-65
 available grade levels | K-5
 year of last update | 2023
-
 
 id|ZB
 name|Superkids reading Program
@@ -204,7 +192,6 @@ time required 1st grade| 110-130
 available grade levels | K-2
 year of last update | 2025
 
-
 id|RM
 name|Reading Mastery Transformations
 company| McGraw Hill
@@ -219,7 +206,6 @@ cultural responsiveness| not rated
 time required 1st grade| unclear
 available grade levels | K-5
 year of last update | 2021
-
 
 id|FP
 name|Fishtank Plus ELA

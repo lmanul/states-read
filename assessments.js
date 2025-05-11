@@ -18,7 +18,7 @@ class Assessment {
 
 export const processAssessmentData = (raw) => {
   assessments = {};
-  const assessmentBlocks = raw.split("\n\n\n");
+  const assessmentBlocks = raw.split("\n\n");
   for (let block of assessmentBlocks) {
     const keyValues = block.split("\n");
     let id = null;

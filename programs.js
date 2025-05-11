@@ -22,7 +22,7 @@ class Program {
 
 export const processProgramData = (raw) => {
   programs = {};
-  const programBlocks = raw.split("\n\n\n");
+  const programBlocks = raw.split("\n\n");
   for (let block of programBlocks) {
     const keyValues = block.split("\n");
     const program = new Program("noid", "Unknown Program");

@@ -22,41 +22,33 @@ id|AI
 name|AimsWeb or AimsWeb +
 states|AL,AZ,CT,DC,IN,IA,KS,ME,MD,MI,NE,ND,OK,OR,SC,TN,WA,WV
 
-
 id|AM
 name|Amira
 states|AZ,CT,IN,KY,MD,MA,NE,ND,OK,SC,WA,WV
-
 
 id|DI
 name|DIBELS / mClass
 states|AL,AK,AZ,CO,CT,DC,IN,KS,KY,LA,ME,MD,MA,MI,MN,MS,NE,NC,ND,OH,OK,OR,SC,TN,TX,WA,WV,WY
 
-
 id|EC
 name|easyCBM
 states|CT,IA,KS,ME,MI,OR,SC,TN
-
 
 id|FB
 name|FastBridge
 states|AZ,DC,IA,KS,KY,MD,MI,MN,MS,NE,ND,OH,OK,OR,SC,TN,WA,WY
 
-
 id|IR
 name|iReady
 states|AL,AZ,CO,IN,IA,KS,KY,MD,MI,MS,MO,NE,ND,OH,OK,OR,SC,TN,WA,WV
-
 
 id|IS
 name|ISIP / iStation
 states|AL,AZ,CO,ID,IN,IA,KY,MI,MS,MO,NE,OH,OK,WA,WV
 
-
 id|MA
 name|MAP (NWEA)
 states|AL,IN,IA,KY,MD,MI,MS,MO,NE,NV,ND,OH,OK,OR,SC,TN,WA,WV
-
 
 id|ST
 name|STAR
