@@ -42,6 +42,7 @@ export const processProgramData = (raw) => {
       } else if (key === "states") {
         const approvingStates = value.trim().split(",");
         for (let stateCode of approvingStates) {
+          stateCode = stateCode.trim();
           if (!stateCode) {
             continue;
           }
