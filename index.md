@@ -5,7 +5,7 @@ layout: default
 <div id="main">
 <div id="map-container">
   <div id="controls">
-    <button onclick="clearStateHighlights()">Clear</button>
+    <button onclick="clearMapState()">Clear</button>
   </div>
   <div id="map">Loading...</div>
   <div id="popup"></div>

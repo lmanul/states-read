@@ -5,36 +5,16 @@ import {
 } from "./assessments.js";
 import { formatSingleProgramPill, processProgramData } from "./programs.js";
 import { init as statesInit, states } from "./states.js";
+import { clearStateHover, clearStateSelected, HOVER_CLASS, SELECTED_CLASS } from "./util.js";
 
 const init = () => {
   statesInit();
   document.body.onload = onMapLoad;
 };
 
-const HOVER_CLASS = "hover";
-const SELECTED_CLASS = "selected";
-
 const isStateElement = (el) => {
   const id = el.getAttribute("id");
   return id !== "" && stateCodes.includes(id.toUpperCase());
-};
-
-const clearStateHover = () => {
-  let currentlyHovered = document.getElementsByClassName(HOVER_CLASS);
-  if (currentlyHovered.length > 0) {
-    for (let i = 0; i < currentlyHovered.length; i++) {
-      currentlyHovered[i].classList.remove(HOVER_CLASS);
-    }
-  }
-};
-
-const clearStateSelected = () => {
-  let currentlySelected = document.getElementsByClassName(SELECTED_CLASS);
-  if (currentlySelected.length > 0) {
-    for (let i = 0; i < currentlySelected.length; i++) {
-      currentlySelected[i].classList.remove(SELECTED_CLASS);
-    }
-  }
 };
 
 const onMapClick = (e) => {
