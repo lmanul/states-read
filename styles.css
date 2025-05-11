@@ -58,20 +58,18 @@ body {
 #map {
   flex-grow: 0;
 }
-#map svg {
-}
 #footer {
   flex-grow: 0;
 }
-.hover {
-  cursor: pointer;
-  fill: #ffeb98 !important;
+.highlight {
+  fill: #777 !important;
 }
 .selected {
   fill: #ffdd4d !important;
 }
-.highlight {
-  fill: #777 !important;
+.hover {
+  cursor: pointer;
+  fill: #ffeb98 !important;
 }
 #details {
   background-color: #eee;
