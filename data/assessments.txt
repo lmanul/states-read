@@ -1,7 +1,22 @@
 id|AC
 name|Acadiance
 states|AZ,CO,CT,DC,IN,IA,KS,KY,ME,MD,MI,NE,ND,OK,OR,SC,UT,WA,WV,WY
-
+publisher|
+parent company|
+owners|
+advertised alongside|
+available grade levels|
+assessment type|
+time required|
+technology use|
+level labels|
+alignment to other assessments|
+National Center for Intensive Intervention Rating for Fall of 1st grade|
+Sound- and Symbol-level skills|
+Word-level skills|
+Vocabulary|
+Fluency|
+Comprehension|
 
 id|AI
 name|AimsWeb or AimsWeb +
