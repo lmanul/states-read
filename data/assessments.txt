@@ -1,17 +1,17 @@
 id|AC
 name|Acadiance
 states|AZ,CO,CT,DC,IN,IA,KS,KY,ME,MD,MI,NE,ND,OK,OR,SC,UT,WA,WV,WY
-publisher|
-parent company|
-owners|
-advertised alongside|
-available grade levels|
+publisher| Acadiance Learning
+parent company| Wilson Language Training
+owners|Apline Investors
+advertised alongside| Acadience Math, Acadience Data management
+available grade levels| K-8
 assessment type|
-time required|
-technology use|
-level labels|
-alignment to other assessments|
-National Center for Intensive Intervention Rating for Fall of 1st grade|
+time required| 15
+technology|
+level labels| At or above benchmark; benchmark; below benchmark; far below benchmark
+alignment to other assessments| GRADE (.33-.77); CTOPP (.19-.49)
+National Center for Intensive Intervention Rating for Fall of 1st grade| Convincing
 Sound- and Symbol-level skills|
 Word-level skills|
 Vocabulary|
