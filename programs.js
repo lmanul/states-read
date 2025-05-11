@@ -26,11 +26,10 @@ export const processProgramData = (raw) => {
   for (let block of programBlocks) {
     const keyValues = block.split("\n");
     const program = new Program("noid", "Unknown Program");
-    let id = null;
     for (let keyValue of keyValues) {
       let [key, value] = keyValue.split("|").map((a) => a.trim());
       if (key === "id") {
-        program.id = id;
+        program.id = value;
       } else if (key === "name") {
         program.name = value;
       } else if (key === "company") {
