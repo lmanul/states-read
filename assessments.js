@@ -62,6 +62,9 @@ export const formatSingleAssessmentPill = (id) => {
 export const showAssessment = (id) => {
   clearDetails();
   const assessment = assessments[id];
+  if (!assessment) {
+    alert("I don't know about assessment " + id)
+  }
   highlightStates(assessment.approvingStates, states);
 
   setDetails(formatAssessmentDetails(id));

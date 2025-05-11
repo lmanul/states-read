@@ -66,7 +66,7 @@ const formatPopupContent = (stateCode) => {
   const formattedApprovedAssessments = approvedAssessments.length > 0 ?
       approvedAssessments.map(formatSingleAssessmentPill).join("") : '∅';
   const formattedApprovedPrograms = approvedPrograms.length > 0 ?
-      approvedPrograms.map(formatSingleAssessmentPill).join("") : '∅';
+      approvedPrograms.map(formatSingleProgramPill).join("") : '∅';
 
   return `
    ${getPopupTitle(stateCode)}
