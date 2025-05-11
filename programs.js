@@ -38,7 +38,10 @@ export const processProgramData = (raw) => {
         program.company = value;
       } else if (key === 'content focus') {
         program.contentFocusLowHigh = parseContentFocus(value);
-        console.log(program.contentFocusLowHigh);
+      } else if (key === 'time required 1st grade') {
+        program.timeRequiredFirstGradeMinutes = parseInt(value);
+      } else if (key === 'year of last update') {
+        program.yearOfLastUpdate = value;
       } else if (key === "aligned") {
         program.aligned = value;
       } else if (key === "feasible") {
@@ -99,11 +102,19 @@ const formatContentFocus = (p) => {
   return p.contentFocusLowHigh[0] + ' — ' + p.contentFocusLowHigh[1] + '%';
 };
 
+const formatTimeRequiredFirstGrade = (program) => {
+  if (!program.timeRequiredFirstGradeMinutes) {
+    return '';
+  }
+  return program.timeRequiredFirstGradeMinutes + ' minutes';
+};
+
 const formatProgramDetails = (id) => {
   const program = programs[id];
   const aligned = getValueForAligned(program.aligned);
   const feasible = getValueForFeasible(program.feasible);
   const contentFocus = formatContentFocus(program);
+  const timeRequiredFirstGrade = formatTimeRequiredFirstGrade(program);
 
   return `
       <h1 class="program">${program.name}</h1>
@@ -114,6 +125,8 @@ const formatProgramDetails = (id) => {
       ${showKeyValueIfDefined('Aligned', aligned)}
       ${showKeyValueIfDefined('Feasible', feasible)}
       ${showKeyValueIfDefined('Content Focus', contentFocus)}
+      ${showKeyValueIfDefined('Time Required 1<sup>st</sup> grade', timeRequiredFirstGrade)}
+      ${showKeyValueIfDefined('Years of last update', program.yearOfLastUpdate)}
     `;
 };
 
