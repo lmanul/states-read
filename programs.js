@@ -46,6 +46,10 @@ export const processProgramData = (raw) => {
           if (!stateCode) {
             continue;
           }
+          if (!states[stateCode]) {
+            alert('Sorry I do not know about state "' + stateCode + '"');
+            continue;
+          }
           states[stateCode].approvedPrograms.push(id);
         }
         program.approvingStates = approvingStates;
