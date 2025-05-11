@@ -3,7 +3,7 @@ name|Into Reading
 company|Houghton Mifflin Harcourt
 owners| Veritas Capital
 advertised alongside| ¡Arriba la Lectura!; Amira Learning
-states|CO,CT,TN,AR,NY,OH
+states|CO,CT,TN,AR,OH
 evidence-based| No independent, peer-reviewed studies. Ongoing efforts to examine effects unclear.
 aligned|meets
 feasible|meets
@@ -34,7 +34,7 @@ name|EL-Imagine Learning
 company|Imagine Learning
 owners| nonprofit
 advertised alongside| n/a
-states| CO, CT, TN, NYC, OH
+states| CO, CT, TN, OH
 evidence-base |No independent, peer-reviewed studies. Ongoing efforts to examine effects in one site are described on the website as ongoing.
 aligned| me
 feasible| me
@@ -66,7 +66,7 @@ name|Wit and Wisdom
 company| Great Minds PBC
 owners| Ibis Group
 advertised alongside| geodes, EurekaMath2, PhDScience, Arts&Letters
-states| CT, TN, AR, NYC, OH
+states| CT, TN, AR, OH
 evidence-based| No independent, peer-reviewed studies. Ongoing efforts to examine effects are not clear.
 aligned| me
 feasible| me
