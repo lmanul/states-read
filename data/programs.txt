@@ -1,125 +1,236 @@
 id|IR
 name|Into Reading
-company|HMH
+company|Houghton Mifflin Harcourt
+owners| Veritas Capital
+advertised alongside| ¡Arriba la Lectura!; Amira Learning
 states|CO,CT,TN,AR,NY,OH
-aligned|me
-feasible|me
+evidence-based| No independent, peer-reviewed studies. Ongoing efforts to examine effects unclear.
+aligned|meets
+feasible|meets
+content focus| 66-74%
+cultural responsiveness| destructive
+time required 1st grade| 90
+available grade levels | K-6
+year of last update | 2022
 
 
 id|WO
-name|Wonders (2017, 2020)
-company|McGraw-Hill
-states|CO,CT,DC,TN,AR,OH
-aligned|me
-feasible|me
+name|Wonders
+company| McGraw Hill Education
+owners| Platinum Equity
+evidence-based| Qualifying studies found no significant results. Ongoing efforts to examine effects are unclear.
+states| CO, CT, DC, TN, AR, OH
+aligned|meets
+feasible|meets
+content focus| not rated
+cultural responsiveness| culturally destructive
+time required 1st grade| 60-75
+available grade levels | K-6
+year of last update | 2020
 
 
 id|EI
-name|EL Imagine Learning (LearnZillion & Open Up)
-company|
-states|CO,CT,TN,NY,OH
-aligned|
-feasible|
+name|EL-Imagine Learning
+company|Imagine Learning
+owners| nonprofit
+advertised alongside| n/a
+states| CO, CT, TN, NYC, OH
+evidence-base |No independent, peer-reviewed studies. Ongoing efforts to examine effects in one site are described on the website as ongoing.
+aligned| me
+feasible| me
+content focus| 71-88%
+cultural responsiveness| not rated
+time required 1st grade| 120-180
+available grade levels | k-8
+year of last update | 2017
 
 
 id|AM
-name|CKLA 2017
-company|Amplify
-states|CO,CT,TN,AR,OH
-aligned|me
-feasible|me
+name|Amplify CKLA
+company| Amplify
+owners| Emerson Collective
+advertised alongside| mclass, Boost Reading, Amplify Caminos, PD, digital resources
+states| CO, CT, TN, AR, OH
+evidence-based| One peer-reviewed study focused on outcomes in grades 3-6. Other working papers indicate significant positive results in grades 3-6, and a NYC pilot study investigates K-2.
+aligned| me
+feasible| me
+content focus| 67-83
+cultural responsiveness| not rated
+time required 1st grade| 90-120
+available grade levels | K-5
+year of last update | 2025
 
 
 id|WW
-name|Wit & Wisdom
-company|
-states|CT,TN,AR,NY,OH
-aligned|me
-feasible|me
+name|Wit and Wisdom
+company| Great Minds PBC
+owners| Ibis Group
+advertised alongside| geodes, EurekaMath2, PhDScience, Arts&Letters
+states| CT, TN, AR, NYC, OH
+evidence-based| No independent, peer-reviewed studies. Ongoing efforts to examine effects are not clear.
+aligned| me
+feasible| me
+content focus| 71-80%
+cultural responsiveness|  destructive
+time required 1st grade| 90
+available grade levels | K-5
+year of last update |
 
 
 id|BA
 name|Benchmark Advance
-company|
-states|CO,DC,TN,OH
-aligned|me
-feasible|me
+company| Benchmark Education Company
+owners| family-owned
+advertised alongside| Professional development, additional phonics & additional EL resources
+states| CO, CT, DC, TN, OH
+evidence-based| No independent, peer-reviewed studies. Ongoing efforts to examine effects are not clear.
+aligned| me
+feasible| me
+content focus| not rated
+cultural responsiveness| not rated
+time required 1st grade| 90
+available grade levels | K-5
+year of last update | 2020
 
 
 id|BE
 name|Benchmark Workshop
-company|
-states|CO,DC,AR,OK
-aligned|
-feasible|
+company| Benchmark Education Company
+owners| family-owned
+advertised alongside| Professional development, intervention
+states| CO, DC, AR, OK
+evidence-based| No independent, peer-reviewed studies. Ongoing efforts to examine effects are not clear.
+aligned| me
+feasible| me
+content focus| not rated
+cultural responsiveness| not rated
+time required 1st grade|
+available grade levels | K-5
+year of last update | unknown
 
 
 id|BW
 name|Bookworms
-company|
-states|
-aligned|pa
-feasible|ne
+company| Open Up Resources
+owners| Open Up Resources (nonprofit)
+advertised alongside| Professional development
+states| CT
+evidence-based| 2 experimental, peer-reviewed studies of impact in grades 2-5 (none of K/1)
+aligned| partially
+feasible| not rated
+content focus| not rated
+cultural responsiveness|  not rated
+time required 1st grade| 90
+available grade levels | K-5
+year of last update | 2022
 
 id|OC
-name|Open Court (2016)
-company|
-states|CO,CT,AR
-aligned|me
-feasible|me
+name|Open Court
+company| McGraw Hill Education
+owners| Platinum Equity
+advertised alongside| Wonderworks, World of Wonders, Maravillas
+states| CO, CT, AR
+evidence-based| 3 peer-reviewed studies, 2 with negative results, one neutral
+aligned| meets
+feasible| meets
+content focus| 54-74%
+cultural responsiveness| not rated
+time required 1st grade| 60-75
+available grade levels | K-6
+year of last update | 2023
 
 
 id|SL
-name|myView Literacy 2020
-company|Savvas Learning
-states|CO,CT,OH
-aligned|me
-feasible|me
+name|myView Literacy
+company| Savvas Learning
+owners| Nexus Capital Management
+advertised alongside| savvas realize, savvas one
+states|
+evidence-based| No independent, peer-reviewed studies. Ongoing efforts to examine effects are not clear.
+aligned| meets
+feasible| meets
+content focus| not rated
+cultural responsiveness| destructive
+time required 1st grade| 120-180
+available grade levels | K-5
+year of last update | 2025
 
 
 id|AR
-name|ARC Core (2017)
-company|American Reading Company
-states|CT,OH
-aligned|me
-feasible|me
+name|ARC Core
+company| American Reading Company
+owners| employee-owned
+advertised alongside| none
+states| CO, CT, OH
+evidence-based| one study of Kindergarten
+aligned| meets
+feasible| meets
+content focus| not rated
+cultural responsiveness| not rated
+time required 1st grade| 60-140
+available grade levels | K-12
+year of last update | 2017
 
 
-id|CC
-name|Center for the Collaborative Classroom
-company|
-states|CO,AR
-aligned|
-feasible|
+id|BR
+name|Being a Reader
+company| Center for the Collaborative Classroom
+owners| nonprofit
+advertised alongside| seeds of learning,
+states| CO, AR
+evidence-based| none
+aligned| not rated
+feasible|  not rated
+content focus|  not rated
+cultural responsiveness|  not rated
+time required 1st grade| 35-65
+available grade levels | K-5
+year of last update | 2023
 
 
 id|ZB
-name|Zaner Bloser Superkids reading Program (2017)
-company|
-states|CO,AR
-aligned|
-feasible|
+name|Superkids reading Program
+company| Zaner Bloser
+owners| Highlights for Children
+advertised alongside| none
+states| CO, AR
+evidence-based| no studies
+aligned| partially
+feasible| not rated
+content focus| not rated
+cultural responsiveness| not rated
+time required 1st grade| 110-130
+available grade levels | K-2
+year of last update | 2025
 
 
 id|RM
-name|Reading Mastery Transformations (2021)
-company|
-states|CO
-aligned|
-feasible|
-
-
-id|OE
-name|Our EL Education K-5 ELA
-company|
-states|OH
-aligned|me
-feasible|me
+name|Reading Mastery Transformations
+company| McGraw Hill
+owners| Platinum Equity
+advertised alongside| none
+states| CO
+evidence-based| evidence for Reading Mastery intervention, not core prgoram
+aligned| not rated
+feasible| not rated
+content focus| not rated
+cultural responsiveness| not rated
+time required 1st grade| unclear
+available grade levels | K-5
+year of last update | 2021
 
 
 id|FP
 name|Fishtank Plus ELA
-company|
-states|OH
-aligned|
-feasible|
+company|Fishtank Learning
+owners| none
+advertised alongside| Fishtank math
+states| OH
+evidence-based| no available studies
+aligned| meets
+feasible| partially
+content focus| not rated
+cultural responsiveness| not rated
+time required 1st grade| 60
+available grade levels | K-10
+year of last update | 2021
