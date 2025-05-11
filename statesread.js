@@ -52,12 +52,17 @@ const formatPopupContent = (stateCode) => {
   const approvedAssessments = states[stateCode].approvedAssessments;
   const approvedPrograms = states[stateCode].approvedPrograms;
 
+  const formattedApprovedAssessments = approvedAssessments.length > 0 ?
+      approvedAssessments.map(formatSingleAssessmentPill).join("") : '∅';
+  const formattedApprovedPrograms = approvedPrograms.length > 0 ?
+      approvedPrograms.map(formatSingleAssessmentPill).join("") : '∅';
+
   return `
    ${getPopupTitle(stateCode)}
    <h2 class="assessment">Approved assessments</h2>
-   ${approvedAssessments.map(formatSingleAssessmentPill).join("")}
+   ${formattedApprovedAssessments}
    <h2 class="program">Approved programs</h2>
-   ${approvedPrograms.map(formatSingleProgramPill).join(" ")}`;
+   ${formattedApprovedPrograms}`;
 };
 
 const showPopup = (show, clientX, clientY, id) => {
