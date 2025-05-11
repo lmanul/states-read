@@ -7,7 +7,7 @@ states|CO,CT,TN,AR,OH
 evidence-based| No independent, peer-reviewed studies. Ongoing efforts to examine effects unclear.
 aligned|meets
 feasible|meets
-content focus| 66-74%
+content focus| 66-74
 cultural responsiveness| destructive
 time required 1st grade| 90
 available grade levels | K-6
@@ -38,7 +38,7 @@ states| CO, CT, TN, OH
 evidence-base |No independent, peer-reviewed studies. Ongoing efforts to examine effects in one site are described on the website as ongoing.
 aligned| me
 feasible| me
-content focus| 71-88%
+content focus| 71-88
 cultural responsiveness| not rated
 time required 1st grade| 120-180
 available grade levels | k-8
@@ -70,7 +70,7 @@ states| CT, TN, AR, OH
 evidence-based| No independent, peer-reviewed studies. Ongoing efforts to examine effects are not clear.
 aligned| me
 feasible| me
-content focus| 71-80%
+content focus| 71-80
 cultural responsiveness|  destructive
 time required 1st grade| 90
 available grade levels | K-5
@@ -134,7 +134,7 @@ states| CO, CT, AR
 evidence-based| 3 peer-reviewed studies, 2 with negative results, one neutral
 aligned| meets
 feasible| meets
-content focus| 54-74%
+content focus| 54-74
 cultural responsiveness| not rated
 time required 1st grade| 60-75
 available grade levels | K-6
