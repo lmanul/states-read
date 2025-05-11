@@ -3,6 +3,7 @@ import {
   clearDetails,
   formatSingleStatePill,
   highlightStates,
+  showKeyValueIfDefined
 } from "./util.js";
 import { states } from "./states.js";
 
@@ -35,6 +36,9 @@ export const processProgramData = (raw) => {
         program.name = value;
       } else if (key === "company") {
         program.company = value;
+      } else if (key === 'content focus') {
+        program.contentFocusLowHigh = parseContentFocus(value);
+        console.log(program.contentFocusLowHigh);
       } else if (key === "aligned") {
         program.aligned = value;
       } else if (key === "feasible") {
@@ -71,26 +75,45 @@ const getValueForFeasible = (id) => {
 const getValueForAligned = (id) => {
   switch (id) {
     case "me":
+    case "meets":
       return "Meets EdReports expectations";
     case "pa":
+    case "partially":
       return "Partially Meets EdReports expectations";
     default:
       return "";
   }
 };
 
+const parseContentFocus = (s) => {
+  if (s.includes('not rated')) {
+    return '';
+  }
+  return s.split('-').map(a => a.trim());
+};
+
+const formatContentFocus = (p) => {
+  if (!p.contentFocusLowHigh) {
+    return '';
+  }
+  return p.contentFocusLowHigh[0] + ' — ' + p.contentFocusLowHigh[1] + '%';
+};
+
 const formatProgramDetails = (id) => {
   const program = programs[id];
   const aligned = getValueForAligned(program.aligned);
   const feasible = getValueForFeasible(program.feasible);
+  const contentFocus = formatContentFocus(program);
+
   return `
       <h1 class="program">${program.name}</h1>
       <p><b>Approved in ${program.approvingStates.length} states: </b>
       ${program.approvingStates.map(formatSingleStatePill).join(" ")}
       </p>
-      ${program.company ? "<p><b>Company</b>: " + program.company + "</p>" : ""}
-      ${aligned ? "<p><b>Aligned</b>: " + aligned + "</p>" : ""}
-      ${feasible ? "<p><b>Feasible</b>: " + feasible + "</p>" : ""}
+      ${showKeyValueIfDefined('Company', program.company)}
+      ${showKeyValueIfDefined('Aligned', aligned)}
+      ${showKeyValueIfDefined('Feasible', feasible)}
+      ${showKeyValueIfDefined('Content Focus', contentFocus)}
     `;
 };
 

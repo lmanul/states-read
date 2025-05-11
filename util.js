@@ -35,4 +35,11 @@ export const formatSingleStatePill = (id) => {
     `;
 };
 
+export const showKeyValueIfDefined = (keyDisplayName, value) => {
+  if (!value) {
+    return '';
+  }
+  return "<p><b>" + keyDisplayName + "</b>: " + value + "</p>";
+};
+
 window.clearStateHighlights = clearStateHighlights;
