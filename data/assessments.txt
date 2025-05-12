@@ -1,55 +1,186 @@
 id|AC
-name|Acadiance
+name|Acadiance (DIBELS Next)
 states|AZ,CO,CT,DC,IN,IA,KS,KY,ME,MD,MI,NE,ND,OK,OR,SC,UT,WA,WV,WY
+Percent of state approvals| 57%
 publisher| Acadiance Learning
 parent company| Wilson Language Training
 owners|Apline Investors
 advertised alongside| Acadience Math, Acadience Data management
 available grade levels| K-8
-assessment type|
+assessment type| fixed question
 time required| 15
-technology|
-level labels| At or above benchmark; benchmark; below benchmark; far below benchmark
 alignment to other assessments| GRADE (.33-.77); CTOPP (.19-.49)
-National Center for Intensive Intervention Rating for Fall of 1st grade| Convincing
-Sound- and Symbol-level skills|
-Word-level skills|
-Vocabulary|
-Fluency|
-Comprehension|
+National Center for Intensive Intervention Rating for Fall of 1st grade| Partially Convincing
+Sound- and Symbol-level skills| Letter-Naming Fluency; Phoneme Segmentation
+Word-level skills| Nonsense Word Fluency, Word Use Fluency
+Vocabulary| n/a
+Fluency and Comprehension| Oral Reading Fluency, Maze
 
 id|AI
 name|AimsWeb or AimsWeb +
 states|AL,AZ,CT,DC,IN,IA,KS,ME,MD,MI,NE,ND,OK,OR,SC,TN,WA,WV
+Percent of state approvals| 
+publisher| 
+parent company| 
+owners|
+advertised alongside| 
+available grade levels|
+assessment type| 
+time required| 
+alignment to other assessments| 
+National Center for Intensive Intervention Rating for Fall of 1st grade| 
+Sound- and Symbol-level skills| 
+Word-level skills| 
+Vocabulary| 
+Fluency and Comprehension| 
 
 id|AM
 name|Amira
 states|AZ,CT,IN,KY,MD,MA,NE,ND,OK,SC,WA,WV
+Percent of state approvals| 
+publisher| 
+parent company| 
+owners|
+advertised alongside| 
+available grade levels|
+assessment type| 
+time required| 
+alignment to other assessments| 
+National Center for Intensive Intervention Rating for Fall of 1st grade| 
+Sound- and Symbol-level skills| 
+Word-level skills| 
+Vocabulary| 
+Fluency and Comprehension| 
+
 
 id|DI
 name|DIBELS / mClass
 states|AL,AK,AZ,CO,CT,DC,IN,KS,KY,LA,ME,MD,MA,MI,MN,MS,NE,NC,ND,OH,OK,OR,SC,TN,TX,WA,WV,WY
+Percent of state approvals| 
+publisher| 
+parent company| 
+owners|
+advertised alongside| 
+available grade levels|
+assessment type| 
+time required| 
+alignment to other assessments| 
+National Center for Intensive Intervention Rating for Fall of 1st grade| 
+Sound- and Symbol-level skills| 
+Word-level skills| 
+Vocabulary| 
+Fluency and Comprehension| 
+
 
 id|EC
 name|easyCBM
 states|CT,IA,KS,ME,MI,OR,SC,TN
+Percent of state approvals| 
+publisher| 
+parent company| 
+owners|
+advertised alongside| 
+available grade levels|
+assessment type| 
+time required| 
+alignment to other assessments| 
+National Center for Intensive Intervention Rating for Fall of 1st grade| 
+Sound- and Symbol-level skills| 
+Word-level skills| 
+Vocabulary| 
+Fluency and Comprehension| 
+
 
 id|FB
 name|FastBridge
 states|AZ,DC,IA,KS,KY,MD,MI,MN,MS,NE,ND,OH,OK,OR,SC,TN,WA,WY
+Percent of state approvals| 
+publisher| 
+parent company| 
+owners|
+advertised alongside| 
+available grade levels|
+assessment type| 
+time required| 
+alignment to other assessments| 
+National Center for Intensive Intervention Rating for Fall of 1st grade| 
+Sound- and Symbol-level skills| 
+Word-level skills| 
+Vocabulary| 
+Fluency and Comprehension| 
+
 
 id|IR
 name|iReady
 states|AL,AZ,CO,IN,IA,KS,KY,MD,MI,MS,MO,NE,ND,OH,OK,OR,SC,TN,WA,WV
+Percent of state approvals| 
+publisher| 
+parent company| 
+owners|
+advertised alongside| 
+available grade levels|
+assessment type| 
+time required| 
+alignment to other assessments| 
+National Center for Intensive Intervention Rating for Fall of 1st grade| 
+Sound- and Symbol-level skills| 
+Word-level skills| 
+Vocabulary| 
+Fluency and Comprehension| 
+
 
 id|IS
 name|ISIP / iStation
 states|AL,AZ,CO,ID,IN,IA,KY,MI,MS,MO,NE,OH,OK,WA,WV
+Percent of state approvals| 
+publisher| 
+parent company| 
+owners|
+advertised alongside| 
+available grade levels|
+assessment type| 
+time required| 
+alignment to other assessments| 
+National Center for Intensive Intervention Rating for Fall of 1st grade| 
+Sound- and Symbol-level skills| 
+Word-level skills| 
+Vocabulary| 
+Fluency and Comprehension| 
+
 
 id|MA
 name|MAP (NWEA)
 states|AL,IN,IA,KY,MD,MI,MS,MO,NE,NV,ND,OH,OK,OR,SC,TN,WA,WV
+Percent of state approvals| 
+publisher| 
+parent company| 
+owners|
+advertised alongside| 
+available grade levels|
+assessment type| 
+time required| 
+alignment to other assessments| 
+National Center for Intensive Intervention Rating for Fall of 1st grade| 
+Sound- and Symbol-level skills| 
+Word-level skills| 
+Vocabulary| 
+Fluency and Comprehension| 
+
 
 id|ST
 name|STAR
 states|AL,AZ,CO,IA,KS,KY,ME,MI,MS,MO,NE,ND,OK,OR,SC,TN,WA,WV
+Percent of state approvals| 
+publisher| 
+parent company| 
+owners|
+advertised alongside| 
+available grade levels|
+assessment type| 
+time required| 
+alignment to other assessments| 
+National Center for Intensive Intervention Rating for Fall of 1st grade| 
+Sound- and Symbol-level skills| 
+Word-level skills| 
+Vocabulary| 
+Fluency and Comprehension| 
