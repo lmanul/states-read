@@ -129,58 +129,42 @@ Vocabulary| Vocabulary
 Fluency and Comprehension| Comprehension-Literature, Comprehension-Informational
 
 
-id|IS
-name|ISIP / iStation
-states|AL,AZ,CO,ID,IN,IA,KY,MI,MS,MO,NE,OH,OK,WA,WV
-Percent of state approvals| 
-publisher| 
-parent company| 
-owners|
-advertised alongside| 
-available grade levels|
-assessment type| 
-time required| 
-alignment to other assessments| 
-National Center for Intensive Intervention Rating for Fall of 1st grade| 
-Sound- and Symbol-level skills| 
-Word-level skills| 
-Vocabulary| 
-Fluency and Comprehension| 
-
-
 id|MA
 name|MAP (NWEA)
 states|AL,IN,IA,KY,MD,MI,MS,MO,NE,NV,ND,OH,OK,OR,SC,TN,WA,WV
-Percent of state approvals| 
-publisher| 
-parent company| 
-owners|
-advertised alongside| 
-available grade levels|
-assessment type| 
-time required| 
-alignment to other assessments| 
-National Center for Intensive Intervention Rating for Fall of 1st grade| 
-Sound- and Symbol-level skills| 
-Word-level skills| 
-Vocabulary| 
-Fluency and Comprehension| 
+Percent of state approvals| 51%
+publisher| Northwest Evaluation Association (NWEA)
+parent company| Houghton Mifflin Harcourt
+owners|Veritas Capital
+advertised alongside| 18 supplemental programs for 1st grade
+available grade levels|K-12
+assessment type| computer-adaptive
+time required| 20-40
+alignment to other assessments| ACT Aspire, PARCC and Smarter Balanced (.78-.80)
+National Center for Intensive Intervention Rating for Fall of 1st grade| Partially Convincing
+Sound- and Symbol-level skills| Phonological awareness, print concepts
+Word-level skills| phonics and word recogition
+Vocabulary| context clues and references, vocabulary acquisition and use
+Fluency and Comprehension| "Literature: Key Ideas, Craft, Structure
+
+Informational Text: Key Ideas, Details, Craft, Structure
+"
 
 
 id|ST
 name|STAR
 states|AL,AZ,CO,IA,KS,KY,ME,MI,MS,MO,NE,ND,OK,OR,SC,TN,WA,WV
-Percent of state approvals| 
-publisher| 
-parent company| 
-owners|
-advertised alongside| 
-available grade levels|
-assessment type| 
-time required| 
-alignment to other assessments| 
-National Center for Intensive Intervention Rating for Fall of 1st grade| 
-Sound- and Symbol-level skills| 
-Word-level skills| 
-Vocabulary| 
-Fluency and Comprehension| 
+Percent of state approvals| 51%
+publisher| Renaissance
+parent company| n/a
+owners|Francisco Partners
+advertised alongside| STAR Reading & STAR in Spanish
+available grade levels|k-12
+assessment type| computer adaptive
+time required| 12-15
+alignment to other assessments| Smarter Balanced (.76-.81), PARCC (.77-.85), SAT-9, multiple individual state accountability tests (.71-.74)
+National Center for Intensive Intervention Rating for Fall of 1st grade| Convincing
+Sound- and Symbol-level skills| Alphabetic Principle, Concept of Word, Visual Discrimination, Phonemic Awareness, Phonics
+Word-level skills| Structural Analysis
+Vocabulary| Vocabulary
+Fluency and Comprehension| "Sentence-Level Comprehension, Paragraph-Level Comprehension"
