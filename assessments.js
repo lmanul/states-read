@@ -31,7 +31,11 @@ export const processAssessmentData = (raw) => {
       } else if (key === "name") {
         assessment.name = value;
       } else if (key === "time required") {
-        assessment.timeRequired = parseInt(value);
+        if (value.includes('-')) {
+          assessment.timeRequired = value.split('-').map(v => parseInt(v.trim()));
+        } else {
+          assessment.timeRequired = parseInt(value);
+        }
       } else if (key === "states") {
         approvingStates = value.trim().split(",");
         for (let stateCode of approvingStates) {
@@ -46,10 +50,17 @@ export const processAssessmentData = (raw) => {
 
 const formatAssessmentDetails = (id) => {
   const assessment = assessments[id];
+  let timeRequired = '';
+  if (assessment.timeRequired) {
+    timeRequired = (!!assessment.timeRequired.length ?
+        assessment.timeRequired[0] + ' — ' + assessment.timeRequired[1] :
+        assessment.timeRequired) + ' minutes';
+  }
   return `
       <h1 class="assessment">${assessment.name}</h1>
       <p><b>Approved in ${assessment.approvingStates.length} states: </b>
       ${assessment.approvingStates.map(formatSingleStatePill).join(" ")}
+      ${showKeyValueIfDefined('Time Required', timeRequired)}
     `;
 };
 

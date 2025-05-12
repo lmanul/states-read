@@ -58,14 +58,14 @@ name|DIBELS 8th Edition/ mClass
 states|AL,AK,AZ,CO,CT,DC,IN,KS,KY,LA,ME,MD,MA,MI,MN,MS,NE,NC,ND,OH,OK,OR,SC,TN,TX,WA,WV,WY
 Percent of state approvals| 91%
 publisher| Amplify
-parent company| 
+parent company|
 owners| Major investors include Leearn Capital, Emerson Collective, A-Street Ventures
 advertised alongside| DIBELS Data System
 available grade levels| K-8
 assessment type| fixed-question
 time required| 8-10
 alignment to other assessments| DIBELS Next, Iowa Assessment of Basic Skills
-National Center for Intensive Intervention Rating for Fall of 1st grade| 
+National Center for Intensive Intervention Rating for Fall of 1st grade|
 Sound- and Symbol-level skills| Letter names, Letter sounds, Phoneme segmenting
 Word-level skills| Word Reading Fluency
 Vocabulary| Vocabulary
@@ -101,7 +101,7 @@ owners|Francisco Partners
 advertised alongside| dyslexia screening, math, social-emotional behaviorand curriculum-based assessments
 available grade levels| K-12
 assessment type| both fixed-question and computer-adaptive testing available
-time required| 30-45 minutes
+time required| 30-45
 alignment to other assessments| Gates-MacGinitie-4th, Iowa Test of Basic Skills, MAP, (.58-.86)
 National Center for Intensive Intervention Rating for Fall of 1st grade| Partially Convincing
 Sound- and Symbol-level skills| Concepts of Print, Phonological awereness, Phonics
