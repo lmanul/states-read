@@ -39,6 +39,8 @@ export const processAssessmentData = (raw) => {
         assessment.owners = value;
       } else if (key === "publisher") {
         assessment.publisher = value;
+      } else if (key === "available grade levels") {
+        assessment.availableGradeLevels = value;
       } else if (key === "time required") {
         if (value.includes('-')) {
           assessment.timeRequired = value.split('-').map(v => parseInt(v.trim()));
@@ -73,6 +75,7 @@ const formatAssessmentDetails = (id) => {
       ${showKeyValueIfDefined('Publisher', assessment.publisher)}
       ${showKeyValueIfDefined('Parent Company', assessment.parentCompany)}
       ${showKeyValueIfDefined('Owners', assessment.owners)}
+      ${showKeyValueIfDefined('Available grade levels', assessment.availableGradeLevels)}
     `;
 };
 
