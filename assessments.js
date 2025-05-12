@@ -39,6 +39,10 @@ export const processAssessmentData = (raw) => {
         assessment.owners = value;
       } else if (key === "publisher") {
         assessment.publisher = value;
+      } else if (key.toLowerCase() === "word-level skills") {
+        assessment.wordLevelSkills = value;
+      } else if (key.toLowerCase() === "national center for intensive intervention rating for fall of 1st grade") {
+        assessment.ncfiirfffg = value;
       } else if (key === "available grade levels") {
         assessment.availableGradeLevels = value;
       } else if (key === "time required") {
@@ -76,6 +80,8 @@ const formatAssessmentDetails = (id) => {
       ${showKeyValueIfDefined('Parent Company', assessment.parentCompany)}
       ${showKeyValueIfDefined('Owners', assessment.owners)}
       ${showKeyValueIfDefined('Available grade levels', assessment.availableGradeLevels)}
+      ${showKeyValueIfDefined('Word-level skills', assessment.wordLevelSkills)}
+      ${showKeyValueIfDefined('National Center for Intensive Intervention Rating for Fall of 1st grade', assessment.ncfiirfffg)}
     `;
 };
 

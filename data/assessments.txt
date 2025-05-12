@@ -52,7 +52,6 @@ Word-level skills| Nonsense word fluency, phoneme blend/segmentspelling
 Vocabulary| Vocabulary
 Fluency and Comprehension| Oral Reading Fluency, reading and listening comprehension
 
-
 id|DI
 name|DIBELS 8th Edition/ mClass
 states|AL,AK,AZ,CO,CT,DC,IN,KS,KY,LA,ME,MD,MA,MI,MN,MS,NE,NC,ND,OH,OK,OR,SC,TN,TX,WA,WV,WY
@@ -70,7 +69,6 @@ Sound- and Symbol-level skills| Letter names, Letter sounds, Phoneme segmenting
 Word-level skills| Word Reading Fluency
 Vocabulary| Vocabulary
 Fluency and Comprehension| Passage Reading Fluency, Reading Comprehension
-
 
 id|EC
 name|easyCBM
@@ -90,7 +88,6 @@ Word-level skills| Word Reading Fluency, Passage Reading Fluency
 Vocabulary| n/a
 Fluency and Comprehension| Literary Text, Informational Text, Read to perform a task
 
-
 id|FB
 name|FastBridge
 states|AZ,DC,IA,KS,KY,MD,MI,MN,MS,NE,ND,OH,OK,OR,SC,TN,WA,WY
@@ -108,7 +105,6 @@ Sound- and Symbol-level skills| Concepts of Print, Phonological awereness, Phoni
 Word-level skills| n/a
 Vocabulary| vocabulary
 Fluency and Comprehension| Comprehension-Literature, Comprehension-Informational
-
 
 id|IR
 name|iReady
@@ -128,7 +124,6 @@ Word-level skills| High-Frequency Words
 Vocabulary| Vocabulary
 Fluency and Comprehension| Comprehension-Literature, Comprehension-Informational
 
-
 id|MA
 name|MAP (NWEA)
 states|AL,IN,IA,KY,MD,MI,MS,MO,NE,NV,ND,OH,OK,OR,SC,TN,WA,WV
@@ -146,10 +141,7 @@ Sound- and Symbol-level skills| Phonological awareness, print concepts
 Word-level skills| phonics and word recogition
 Vocabulary| context clues and references, vocabulary acquisition and use
 Fluency and Comprehension| "Literature: Key Ideas, Craft, Structure
-
-Informational Text: Key Ideas, Details, Craft, Structure
-"
-
+Informational Text: Key Ideas, Details, Craft, Structure"
 
 id|ST
 name|STAR
