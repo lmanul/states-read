@@ -28,6 +28,9 @@ export const processProgramData = (raw) => {
     const program = new Program("noid", "Unknown Program");
     for (let keyValue of keyValues) {
       let [key, value] = keyValue.split("|").map((a) => a.trim());
+      if (value === 'n/a') {
+        continue;
+      }
       if (key === "id") {
         program.id = value;
       } else if (key === "name") {

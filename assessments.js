@@ -26,10 +26,19 @@ export const processAssessmentData = (raw) => {
     let approvingStates = [];
     for (let keyValue of keyValues) {
       const [key, value] = keyValue.split("|").map((a) => a.trim());
+      if (value === 'n/a') {
+        continue;
+      }
       if (key === "id") {
         assessment.id = value;
       } else if (key === "name") {
         assessment.name = value;
+      } else if (key === "parent company") {
+        assessment.parentCompany = value;
+      } else if (key === "owners") {
+        assessment.owners = value;
+      } else if (key === "publisher") {
+        assessment.publisher = value;
       } else if (key === "time required") {
         if (value.includes('-')) {
           assessment.timeRequired = value.split('-').map(v => parseInt(v.trim()));
@@ -61,6 +70,9 @@ const formatAssessmentDetails = (id) => {
       <p><b>Approved in ${assessment.approvingStates.length} states: </b>
       ${assessment.approvingStates.map(formatSingleStatePill).join(" ")}
       ${showKeyValueIfDefined('Time Required', timeRequired)}
+      ${showKeyValueIfDefined('Publisher', assessment.publisher)}
+      ${showKeyValueIfDefined('Parent Company', assessment.parentCompany)}
+      ${showKeyValueIfDefined('Owners', assessment.owners)}
     `;
 };
 
