@@ -41,6 +41,8 @@ export const processAssessmentData = (raw) => {
         assessment.publisher = value;
       } else if (key.toLowerCase() === "word-level skills") {
         assessment.wordLevelSkills = value;
+      } else if (key.toLowerCase() === "fluency and comprehension") {
+        assessment.fluencyAndComprehension = value;
       } else if (key.toLowerCase() === "national center for intensive intervention rating for fall of 1st grade") {
         assessment.ncfiirfffg = value;
       } else if (key === "available grade levels") {
@@ -82,6 +84,7 @@ const formatAssessmentDetails = (id) => {
       ${showKeyValueIfDefined('Available grade levels', assessment.availableGradeLevels)}
       ${showKeyValueIfDefined('Word-level skills', assessment.wordLevelSkills)}
       ${showKeyValueIfDefined('National Center for Intensive Intervention Rating for Fall of 1st grade', assessment.ncfiirfffg)}
+      ${showKeyValueIfDefined('Fluency and Comprehension', assessment.fluencyAndComprehension)}
     `;
 };
 
