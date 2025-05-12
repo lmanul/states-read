@@ -19,114 +19,114 @@ Fluency and Comprehension| Oral Reading Fluency, Maze
 id|AI
 name|AimsWeb or AimsWeb +
 states|AL,AZ,CT,DC,IN,IA,KS,ME,MD,MI,NE,ND,OK,OR,SC,TN,WA,WV
-Percent of state approvals| 
-publisher| 
-parent company| 
-owners|
-advertised alongside| 
-available grade levels|
-assessment type| 
-time required| 
-alignment to other assessments| 
-National Center for Intensive Intervention Rating for Fall of 1st grade| 
-Sound- and Symbol-level skills| 
-Word-level skills| 
-Vocabulary| 
-Fluency and Comprehension| 
+Percent of state approvals| 51%
+publisher| Pearson Clinical Assessments
+parent company| Pearson
+owners|n/a
+advertised alongside| Spell-links to reading and writing, DRA3, review360
+available grade levels| K08
+assessment type| both CAT and Fixed Question available
+time required| 20-40
+alignment to other assessments| ISAT, STAAR, and NMSBA, MAP
+National Center for Intensive Intervention Rating for Fall of 1st grade| n/a
+Sound- and Symbol-level skills| Letter Name Fluency, Letter Word Sound Fluency, Phoneme Segmentation, Spelling
+Word-level skills| Word Reading Fluency, Nonsense Word Reading Fluency
+Vocabulary| Auditory Vocabulary
+Fluency and Comprehension| Oral Reading Fluency, Listening Comprehension
 
 id|AM
 name|Amira
 states|AZ,CT,IN,KY,MD,MA,NE,ND,OK,SC,WA,WV
-Percent of state approvals| 
-publisher| 
-parent company| 
-owners|
-advertised alongside| 
-available grade levels|
-assessment type| 
-time required| 
-alignment to other assessments| 
-National Center for Intensive Intervention Rating for Fall of 1st grade| 
-Sound- and Symbol-level skills| 
-Word-level skills| 
-Vocabulary| 
-Fluency and Comprehension| 
+Percent of state approvals| 34%
+publisher| Amira Learning
+parent company| Houghton Mifflin Harcourt
+owners|Veritas Capital
+advertised alongside| Amira Tutoring, PD, istation
+available grade levels|K-5
+assessment type| computer-adaptive
+time required| 15-18
+alignment to other assessments| Early Assessment of Reading Skills, STAAR
+National Center for Intensive Intervention Rating for Fall of 1st grade| Convincing Evidence
+Sound- and Symbol-level skills| Letter-Sound Fluency, Letter Name Fluency, Rapid Naming
+Word-level skills| Nonsense word fluency, phoneme blend/segmentspelling
+Vocabulary| Vocabulary
+Fluency and Comprehension| Oral Reading Fluency, reading and listening comprehension
 
 
 id|DI
-name|DIBELS / mClass
+name|DIBELS 8th Edition/ mClass
 states|AL,AK,AZ,CO,CT,DC,IN,KS,KY,LA,ME,MD,MA,MI,MN,MS,NE,NC,ND,OH,OK,OR,SC,TN,TX,WA,WV,WY
-Percent of state approvals| 
-publisher| 
+Percent of state approvals| 91%
+publisher| Amplify
 parent company| 
-owners|
-advertised alongside| 
-available grade levels|
-assessment type| 
-time required| 
-alignment to other assessments| 
+owners| Major investors include Leearn Capital, Emerson Collective, A-Street Ventures
+advertised alongside| DIBELS Data System
+available grade levels| K-8
+assessment type| fixed-question
+time required| 8-10
+alignment to other assessments| DIBELS Next, Iowa Assessment of Basic Skills
 National Center for Intensive Intervention Rating for Fall of 1st grade| 
-Sound- and Symbol-level skills| 
-Word-level skills| 
-Vocabulary| 
-Fluency and Comprehension| 
+Sound- and Symbol-level skills| Letter names, Letter sounds, Phoneme segmenting
+Word-level skills| Word Reading Fluency
+Vocabulary| Vocabulary
+Fluency and Comprehension| Passage Reading Fluency, Reading Comprehension
 
 
 id|EC
 name|easyCBM
 states|CT,IA,KS,ME,MI,OR,SC,TN
-Percent of state approvals| 
-publisher| 
-parent company| 
-owners|
-advertised alongside| 
-available grade levels|
-assessment type| 
-time required| 
-alignment to other assessments| 
-National Center for Intensive Intervention Rating for Fall of 1st grade| 
-Sound- and Symbol-level skills| 
-Word-level skills| 
-Vocabulary| 
-Fluency and Comprehension| 
+Percent of state approvals| 23%
+publisher| Behavioral Research and Teaching
+parent company| n/a
+owners| University of Oregon
+advertised alongside| n/a
+available grade levels| K-8
+assessment type| fixed-question
+time required| 25-40
+alignment to other assessments| DIBELS
+National Center for Intensive Intervention Rating for Fall of 1st grade| N/A
+Sound- and Symbol-level skills| Letter names, Phoneme Segmenting, Letter Sounds
+Word-level skills| Word Reading Fluency, Passage Reading Fluency
+Vocabulary| n/a
+Fluency and Comprehension| Literary Text, Informational Text, Read to perform a task
 
 
 id|FB
 name|FastBridge
 states|AZ,DC,IA,KS,KY,MD,MI,MN,MS,NE,ND,OH,OK,OR,SC,TN,WA,WY
-Percent of state approvals| 
-publisher| 
-parent company| 
-owners|
-advertised alongside| 
-available grade levels|
-assessment type| 
-time required| 
-alignment to other assessments| 
-National Center for Intensive Intervention Rating for Fall of 1st grade| 
-Sound- and Symbol-level skills| 
-Word-level skills| 
-Vocabulary| 
-Fluency and Comprehension| 
+Percent of state approvals| 51%
+publisher| Illuminate Education
+parent company| Renaissance
+owners|Francisco Partners
+advertised alongside| dyslexia screening, math, social-emotional behaviorand curriculum-based assessments
+available grade levels| K-12
+assessment type| both fixed-question and computer-adaptive testing available
+time required| 30-45 minutes
+alignment to other assessments| Gates-MacGinitie-4th, Iowa Test of Basic Skills, MAP, (.58-.86)
+National Center for Intensive Intervention Rating for Fall of 1st grade| Partially Convincing
+Sound- and Symbol-level skills| Concepts of Print, Phonological awereness, Phonics
+Word-level skills| n/a
+Vocabulary| vocabulary
+Fluency and Comprehension| Comprehension-Literature, Comprehension-Informational
 
 
 id|IR
 name|iReady
 states|AL,AZ,CO,IN,IA,KS,KY,MD,MI,MS,MO,NE,ND,OH,OK,OR,SC,TN,WA,WV
-Percent of state approvals| 
-publisher| 
-parent company| 
-owners|
-advertised alongside| 
-available grade levels|
-assessment type| 
-time required| 
-alignment to other assessments| 
-National Center for Intensive Intervention Rating for Fall of 1st grade| 
-Sound- and Symbol-level skills| 
-Word-level skills| 
-Vocabulary| 
-Fluency and Comprehension| 
+Percent of state approvals| 43%
+publisher| Curriculum Associates
+parent company| n/a
+owners|Berkshire Partners (majority owner)
+advertised alongside| iReady pro, phonics for reading, personalized instruction, magnetic reading, ready
+available grade levels| K-12
+assessment type| computer-adaptive
+time required| 20-40
+alignment to other assessments| SMARTER Balanced, PARCC, and other state summative assesments inlcluding PSAT
+National Center for Intensive Intervention Rating for Fall of 1st grade| Partially Convincing
+Sound- and Symbol-level skills| Phonological awareness, Phonics
+Word-level skills| High-Frequency Words
+Vocabulary| Vocabulary
+Fluency and Comprehension| Comprehension-Literature, Comprehension-Informational
 
 
 id|IS
