@@ -5,7 +5,7 @@ import {
   highlightStates,
   showKeyValueIfDefined
 } from "./util.js";
-import { states } from "./states.js";
+import { getNumberOfStatesWithAnyAssessmentApprovals, states } from "./states.js";
 
 let assessments;
 
@@ -73,10 +73,14 @@ const formatAssessmentDetails = (id) => {
         assessment.timeRequired[0] + ' — ' + assessment.timeRequired[1] :
         assessment.timeRequired) + ' minutes';
   }
+  const percentOfStateApprovals = Math.round(
+    100 * assessment.approvingStates.length / getNumberOfStatesWithAnyAssessmentApprovals());
+  const percentOfStateApprovalsCalculation = '' + assessment.approvingStates.length + '/' + getNumberOfStatesWithAnyAssessmentApprovals();
   return `
       <h1 class="assessment">${assessment.name}</h1>
       <p><b>Approved in ${assessment.approvingStates.length} states: </b>
       ${assessment.approvingStates.map(formatSingleStatePill).join(" ")}
+      <p><b>Percent of state approvals</b>: ${percentOfStateApprovals}% (${percentOfStateApprovalsCalculation})</p>
       ${showKeyValueIfDefined('Time Required', timeRequired)}
       ${showKeyValueIfDefined('Publisher', assessment.publisher)}
       ${showKeyValueIfDefined('Parent Company', assessment.parentCompany)}

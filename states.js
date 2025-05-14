@@ -9,6 +9,7 @@ class State {
 }
 
 let states;
+let cachedNumberOfStatesWithAnyAssessmentApprovals;
 
 const stateNames = {
   AL: "Alabama",
@@ -72,4 +73,14 @@ const init = () => {
   }
 };
 
-export { init, states, stateNames, stateCodes };
+const getNumberOfStatesWithAnyAssessmentApprovals = () => {
+  if (!cachedNumberOfStatesWithAnyAssessmentApprovals) {
+    cachedNumberOfStatesWithAnyAssessmentApprovals =
+        Object.values(states).filter(s => s.approvedAssessments.length > 0).length;
+  }
+  return cachedNumberOfStatesWithAnyAssessmentApprovals;
+};
+
+export {
+  init, getNumberOfStatesWithAnyAssessmentApprovals, states, stateNames, stateCodes
+};
