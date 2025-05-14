@@ -105,40 +105,22 @@ const processMap = (mapEl) => {
     const programCount = states[stateCodeUpper].approvedPrograms.length;
 
     if (assessmentCount > 0) {
-      svgEl.querySelector("#" + stateCode + "-assessment-text").textContent =
-        assessmentCount;
+      svgEl.querySelector("#" + stateCode + "-assessment-text").textContent = assessmentCount;
     } else {
-      svgEl.querySelector(
-        "#" + stateCode + "-assessment-circle"
-      ).style.display = "none";
-      svgEl.querySelector("#" + stateCode + "-assessment-text").textContent =
-        "";
+      svgEl.querySelector("#" + stateCode + "-assessment-circle").style.display = "none";
+      svgEl.querySelector("#" + stateCode + "-assessment-text").textContent = "";
     }
-    svgEl.querySelector(
-      "#" + stateCode + "-assessment-circle"
-    ).style.pointerEvents = "none";
-    svgEl.querySelector(
-      "#" + stateCode + "-assessment-text"
-    ).style.pointerEvents = "none";
+    svgEl.querySelector("#" + stateCode + "-assessment-circle").style.pointerEvents = "none";
+    svgEl.querySelector("#" + stateCode + "-assessment-text").style.pointerEvents = "none";
     if (programCount > 0) {
-      svgEl.querySelector("#" + stateCode + "-program-text").textContent =
-        programCount;
+      svgEl.querySelector("#" + stateCode + "-program-text").textContent = programCount;
     } else {
-      svgEl.querySelector("#" + stateCode + "-program-circle").style.display =
-        "none";
+      svgEl.querySelector("#" + stateCode + "-program-circle").style.display = "none";
       svgEl.querySelector("#" + stateCode + "-program-text").textContent = "";
     }
-    svgEl.querySelector(
-      "#" + stateCode + "-program-circle"
-    ).style.pointerEvents = "none";
-    svgEl.querySelector("#" + stateCode + "-program-text").style.pointerEvents =
-      "none";
+    svgEl.querySelector("#" + stateCode + "-program-circle").style.pointerEvents = "none";
+    svgEl.querySelector("#" + stateCode + "-program-text").style.pointerEvents = "none";
   }
-
-  const assessmentText = svgEl.querySelector("#wa-assessment-text");
-  assessmentText.textContent = "12";
-  const programText = svgEl.querySelector("#wa-program-text");
-  programText.textContent = "34";
 };
 
 const elementIsInMap = (el) => {
