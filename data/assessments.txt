@@ -1,7 +1,6 @@
 id|AC
 name|Acadiance (DIBELS Next)
 states|AZ,CO,CT,DC,IN,IA,KS,KY,ME,MD,MI,NE,ND,OK,OR,SC,UT,WA,WV,WY
-Percent of state approvals| 57%
 publisher| Acadiance Learning
 parent company| Wilson Language Training
 owners|Apline Investors
@@ -19,7 +18,6 @@ Fluency and Comprehension| Oral Reading Fluency, Maze
 id|AI
 name|AimsWeb or AimsWeb +
 states|AL,AZ,CT,DC,IN,IA,KS,ME,MD,MI,NE,ND,OK,OR,SC,TN,WA,WV
-Percent of state approvals| 51%
 publisher| Pearson Clinical Assessments
 parent company| Pearson
 owners|n/a
@@ -37,7 +35,6 @@ Fluency and Comprehension| Oral Reading Fluency, Listening Comprehension
 id|AM
 name|Amira
 states|AZ,CT,IN,KY,MD,MA,NE,ND,OK,SC,WA,WV
-Percent of state approvals| 34%
 publisher| Amira Learning
 parent company| Houghton Mifflin Harcourt
 owners|Veritas Capital
@@ -55,7 +52,6 @@ Fluency and Comprehension| Oral Reading Fluency, reading and listening comprehen
 id|DI
 name|DIBELS 8th Edition/ mClass
 states|AL,AK,AZ,CO,CT,DC,IN,KS,KY,LA,ME,MD,MA,MI,MN,MS,NE,NC,ND,OH,OK,OR,SC,TN,TX,WA,WV,WY
-Percent of state approvals| 91%
 publisher| Amplify
 parent company|
 owners| Major investors include Leearn Capital, Emerson Collective, A-Street Ventures
@@ -73,7 +69,6 @@ Fluency and Comprehension| Passage Reading Fluency, Reading Comprehension
 id|EC
 name|easyCBM
 states|CT,IA,KS,ME,MI,OR,SC,TN
-Percent of state approvals| 23%
 publisher| Behavioral Research and Teaching
 parent company| n/a
 owners| University of Oregon
@@ -91,7 +86,6 @@ Fluency and Comprehension| Literary Text, Informational Text, Read to perform a 
 id|FB
 name|FastBridge
 states|AZ,DC,IA,KS,KY,MD,MI,MN,MS,NE,ND,OH,OK,OR,SC,TN,WA,WY
-Percent of state approvals| 51%
 publisher| Illuminate Education
 parent company| Renaissance
 owners|Francisco Partners
@@ -109,7 +103,6 @@ Fluency and Comprehension| Comprehension-Literature, Comprehension-Informational
 id|IR
 name|iReady
 states|AL,AZ,CO,IN,IA,KS,KY,MD,MI,MS,MO,NE,ND,OH,OK,OR,SC,TN,WA,WV
-Percent of state approvals| 43%
 publisher| Curriculum Associates
 parent company| n/a
 owners|Berkshire Partners (majority owner)
@@ -127,7 +120,6 @@ Fluency and Comprehension| Comprehension-Literature, Comprehension-Informational
 id|MA
 name|MAP (NWEA)
 states|AL,IN,IA,KY,MD,MI,MS,MO,NE,NV,ND,OH,OK,OR,SC,TN,WA,WV
-Percent of state approvals| 51%
 publisher| Northwest Evaluation Association (NWEA)
 parent company| Houghton Mifflin Harcourt
 owners|Veritas Capital
@@ -146,7 +138,6 @@ Informational Text: Key Ideas, Details, Craft, Structure"
 id|ST
 name|STAR
 states|AL,AZ,CO,IA,KS,KY,ME,MI,MS,MO,NE,ND,OK,OR,SC,TN,WA,WV
-Percent of state approvals| 51%
 publisher| Renaissance
 parent company| n/a
 owners|Francisco Partners
