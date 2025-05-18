@@ -14,6 +14,7 @@ Sound- and Symbol-level skills| Letter-Naming Fluency; Phoneme Segmentation
 Word-level skills| Nonsense Word Fluency, Word Use Fluency
 Vocabulary| n/a
 Fluency and Comprehension| Oral Reading Fluency, Maze
+Coverage of recommended skill areas| P, L, N, S, O
 
 id|AI
 name|AimsWeb or AimsWeb +
@@ -31,6 +32,7 @@ Sound- and Symbol-level skills| Letter Name Fluency, Letter Word Sound Fluency, 
 Word-level skills| Word Reading Fluency, Nonsense Word Reading Fluency
 Vocabulary| Auditory Vocabulary
 Fluency and Comprehension| Oral Reading Fluency, Listening Comprehension
+Coverage of recommended skill areas| P, L, SP, S, N O 
 
 id|AM
 name|Amira
@@ -45,9 +47,10 @@ time required| 15-18
 alignment to other assessments| Early Assessment of Reading Skills, STAAR
 National Center for Intensive Intervention Rating for Fall of 1st grade| Convincing Evidence
 Sound- and Symbol-level skills| Letter-Sound Fluency, Letter Name Fluency, Rapid Naming
-Word-level skills| Nonsense word fluency, phoneme blend/segmentspelling
+Word-level skills| Nonsense word fluency, phoneme blend/segment, spelling
 Vocabulary| Vocabulary
 Fluency and Comprehension| Oral Reading Fluency, reading and listening comprehension
+Coverage of recommended skill areas| R, L, P, SP, N, O
 
 id|DI
 name|DIBELS 8th Edition/ mClass
@@ -62,9 +65,10 @@ time required| 8-10
 alignment to other assessments| DIBELS Next, Iowa Assessment of Basic Skills
 National Center for Intensive Intervention Rating for Fall of 1st grade|
 Sound- and Symbol-level skills| Letter names, Letter sounds, Phoneme segmenting
-Word-level skills| Word Reading Fluency
+Word-level skills| Word Reading Fluency, Nonsense Word Reading Fluency
 Vocabulary| Vocabulary
 Fluency and Comprehension| Passage Reading Fluency, Reading Comprehension
+Coverage of recommended skill areas:| P, L, S, O, N
 
 id|EC
 name|easyCBM
@@ -82,6 +86,7 @@ Sound- and Symbol-level skills| Letter names, Phoneme Segmenting, Letter Sounds
 Word-level skills| Word Reading Fluency, Passage Reading Fluency
 Vocabulary| n/a
 Fluency and Comprehension| Literary Text, Informational Text, Read to perform a task
+Coverage of recommended skill areas:| L, P, S
 
 id|FB
 name|FastBridge
@@ -99,6 +104,7 @@ Sound- and Symbol-level skills| Concepts of Print, Phonological awereness, Phoni
 Word-level skills| n/a
 Vocabulary| vocabulary
 Fluency and Comprehension| Comprehension-Literature, Comprehension-Informational
+Coverage of recommended skill areas| P, L
 
 id|IR
 name|iReady
@@ -116,6 +122,7 @@ Sound- and Symbol-level skills| Phonological awareness, Phonics
 Word-level skills| High-Frequency Words
 Vocabulary| Vocabulary
 Fluency and Comprehension| Comprehension-Literature, Comprehension-Informational
+Coverage of recommended skill areas| P, L, S, 
 
 id|MA
 name|MAP (NWEA)
@@ -134,6 +141,7 @@ Word-level skills| phonics and word recogition
 Vocabulary| context clues and references, vocabulary acquisition and use
 Fluency and Comprehension| "Literature: Key Ideas, Craft, Structure
 Informational Text: Key Ideas, Details, Craft, Structure"
+Coverage of recommended skill areas| P, L, S
 
 id|ST
 name|STAR
@@ -151,3 +159,4 @@ Sound- and Symbol-level skills| Alphabetic Principle, Concept of Word, Visual Di
 Word-level skills| Structural Analysis
 Vocabulary| Vocabulary
 Fluency and Comprehension| "Sentence-Level Comprehension, Paragraph-Level Comprehension"
+Coverage of recommended skill areas| PA, L, S, N
