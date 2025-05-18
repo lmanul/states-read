@@ -78,14 +78,18 @@ const formatAssessmentDetails = (id) => {
   const percentOfStateApprovalsCalculation = '' + assessment.approvingStates.length + '/' + getNumberOfStatesWithAnyAssessmentApprovals();
   return `
       <h1 class="assessment">${assessment.name}</h1>
+      <h2>Approval</h2>
       <p><b>Approved in ${assessment.approvingStates.length} states: </b>
       ${assessment.approvingStates.map(formatSingleStatePill).join(" ")}
       <p><b>Percent of state approvals</b>: ${percentOfStateApprovals}% (${percentOfStateApprovalsCalculation})</p>
-      ${showKeyValueIfDefined('Time Required', timeRequired)}
+      <h2>Publishing</h2>
       ${showKeyValueIfDefined('Publisher', assessment.publisher)}
       ${showKeyValueIfDefined('Parent Company', assessment.parentCompany)}
       ${showKeyValueIfDefined('Owners', assessment.owners)}
+      <h2>Technical information</h2>
+      ${showKeyValueIfDefined('Time Required', timeRequired)}
       ${showKeyValueIfDefined('Available grade levels', assessment.availableGradeLevels)}
+      <h2>Subtests offered</h2>
       ${showKeyValueIfDefined('Word-level skills', assessment.wordLevelSkills)}
       ${showKeyValueIfDefined('National Center for Intensive Intervention Rating for Fall of 1st grade', assessment.ncfiirfffg)}
       ${showKeyValueIfDefined('Fluency and Comprehension', assessment.fluencyAndComprehension)}

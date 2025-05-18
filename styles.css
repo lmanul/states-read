@@ -61,6 +61,14 @@ body {
 #footer {
   flex-grow: 0;
 }
+#details h2 {
+  border-top: 4px solid rgba(0, 0, 0, 0.1);
+  padding-top: 1ex;
+}
+#details p {
+  margin: 0.5ex 0;
+}
+
 .highlight {
   fill: #777 !important;
 }
