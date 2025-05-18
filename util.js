@@ -2,6 +2,23 @@ export const HIGHLIGHT_CLASS = "highlight";
 export const HOVER_CLASS = "hover";
 export const SELECTED_CLASS = "selected";
 
+export const enterTableMode = () => {
+  document.getElementById('map-container').style.display = 'none';
+  document.getElementById('legend').style.display = 'none';
+  document.getElementById('details').style.display = 'none';
+  document.getElementById('popup').style.display = 'none';
+
+  document.getElementById('table-container').style.display = 'block';
+};
+
+export const enterMapMode = () => {
+  document.getElementById('map-container').style.display = 'flex';
+  document.getElementById('details').style.display = 'block';
+  document.getElementById('legend').style.display = 'block';
+
+  document.getElementById('table-container').style.display = 'none';
+};
+
 export const setDetails = (markup) => {
   document.getElementById("details").innerHTML = markup;
 };
@@ -72,3 +89,4 @@ export const showKeyValueIfDefined = (keyDisplayName, value) => {
 };
 
 window.clearMapState = clearMapState;
+window.enterMapMode = enterMapMode;

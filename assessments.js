@@ -1,6 +1,8 @@
 import {
   setDetails,
   clearDetails,
+  enterTableMode,
+  enterMapMode,
   formatSingleStatePill,
   highlightStates,
   showKeyValueIfDefined
@@ -93,7 +95,31 @@ const formatAssessmentDetails = (id) => {
       ${showKeyValueIfDefined('Word-level skills', assessment.wordLevelSkills)}
       ${showKeyValueIfDefined('National Center for Intensive Intervention Rating for Fall of 1st grade', assessment.ncfiirfffg)}
       ${showKeyValueIfDefined('Fluency and Comprehension', assessment.fluencyAndComprehension)}
+      <p style="margin-top: 50px"></p>
+      <p style="text-align: center">
+        <big><a href="#" onclick="compareAssessments()" style="text-decoration: none">Compare Assessments</a></big>
+      </p>
     `;
+};
+
+const formatAssessmentRowInTable = (assessment) => {
+  let timeRequired = '';
+  if (assessment.timeRequired) {
+    timeRequired = (!!assessment.timeRequired.length ?
+        assessment.timeRequired[0] + ' — ' + assessment.timeRequired[1] :
+        assessment.timeRequired);
+  }
+  return `
+    <tr>
+      <td class="odd">${assessment.name || ''}</td>
+      <td class="even">${assessment.publisher || ''}</td>
+      <td class="odd">${assessment.parentCompany || ''}</td>
+      <td class="even">${assessment.owners || ''}</td>
+      <td class="odd">${timeRequired}</td>
+      <td class="even">${assessment.availableGradeLevels || ''}</td>
+      <td class="odd">${assessment.wordLevelSkills || ''}</td>
+    </tr>
+  `;
 };
 
 export const formatSingleAssessmentPill = (id) => {
@@ -113,4 +139,25 @@ export const showAssessment = (id) => {
   setDetails(formatAssessmentDetails(id));
 };
 
+export const compareAssessments = () => {
+  enterTableMode();
+
+  document.getElementById('table-container').innerHTML = `
+    <h1>Assessments</h1>
+    <table>
+      <tr class="header">
+        <th>Name</th>
+        <th>Publisher</th>
+        <th>Parent company</th>
+        <th>Owners</th>
+        <th>Time<br/>required<br/>(minutes)</th>
+        <th>Available<br/>grade<br/>levels</th>
+        <th>Word-level skills</th>
+      </tr>
+    ${Object.values(assessments).map(formatAssessmentRowInTable).join('\n')}
+    </table>
+  `;
+};
+
 window.showAssessment = showAssessment;
+window.compareAssessments = compareAssessments;

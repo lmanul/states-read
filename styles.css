@@ -126,3 +126,34 @@ body {
 .program {
   color: #800f0c;
 }
+#table-container {
+  display: none;
+}
+#table-container table {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-collapse: collapse;
+}
+#table-container th {
+  text-align: left;
+}
+#table-container tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+#table-container tr.header {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+}
+#table-container td, #table-container th {
+  padding: 5px;
+  max-width: 15vw;
+}
+#table-container td.odd {
+  background-color: #eee;
+}
+#table-container td.even {
+  background-color: #ddd;
+}
+
+#table-container tr.odd:hover,
+#table-container tr.even:hover {
+  background-color: lightyellow !important;
+}
