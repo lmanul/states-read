@@ -143,6 +143,7 @@ export const compareAssessments = () => {
   enterTableMode();
 
   document.getElementById('table-container').innerHTML = `
+    <div onclick="enterMapMode()" style="cursor: pointer">⬅️ Back to Map</div>
     <h1>Assessments</h1>
     <table>
       <tr class="header">
