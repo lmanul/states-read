@@ -3,7 +3,7 @@ name|Into Reading
 company|Houghton Mifflin Harcourt
 owners| Veritas Capital
 advertised alongside| ¡Arriba la Lectura!; Amira Learning
-states|CO,CT,TN,AR,OH,WI
+states|CO,CT,TN,AR,OH,WI, VA
 evidence-based| No independent, peer-reviewed studies. Ongoing efforts to examine effects unclear.
 aligned|meets
 feasible|meets
@@ -12,7 +12,7 @@ cultural responsiveness| destructive
 time required 1st grade| 90
 available grade levels | K-6
 year of publication | 2022
-state approvals| 75%
+state approvals| 78%
 
 
 id|WO
@@ -20,7 +20,7 @@ name|Wonders
 company| McGraw Hill Education
 owners| Platinum Equity
 evidence-based| Qualifying studies found no significant results. Ongoing efforts to examine effects are unclear.
-states| CO, CT, DC, TN, AR, OH, WI
+states| CO, CT, DC, TN, AR, OH, WI, VA
 aligned|meets
 feasible|meets
 content focus| not rated
@@ -28,14 +28,14 @@ cultural responsiveness| culturally destructive
 time required 1st grade| 60-75
 available grade levels | K-6
 year of publication | 2020
-state approvals| 88%
+state approvals| 89%
 
 id|EI
 name|EL-Imagine Learning
 company|Imagine Learning
 owners| nonprofit
 advertised alongside| n/a
-states| CO, CT, TN, OH, WI
+states| CO, CT, TN, OH, WI, VA
 evidence-base |No independent, peer-reviewed studies. Ongoing efforts to examine effects in one site are described on the website as ongoing.
 aligned| me
 feasible| me
@@ -44,14 +44,14 @@ cultural responsiveness| not rated
 time required 1st grade| 120-180
 available grade levels | k-8
 year of publication | 2017
-state approvals| 63%
+state approvals| 67%
 
 id|AM
 name|Amplify CKLA
 company| Amplify
 owners| Emerson Collective
 advertised alongside| mclass, Boost Reading, Amplify Caminos, PD, digital resources
-states| CO, CT, TN, AR, OH, WI
+states| CO, CT, TN, AR, OH, WI, VA
 evidence-based| One peer-reviewed study focused on outcomes in grades 3-6. Other working papers indicate significant positive results in grades 3-6, and a NYC pilot study investigates K-2.
 aligned| me
 feasible| me
@@ -60,14 +60,14 @@ cultural responsiveness| not rated
 time required 1st grade| 90-120
 available grade levels | K-5
 year of publication | 2025
-state approvals| 75%
+state approvals| 78%
 
 id|WW
 name|Wit and Wisdom
 company| Great Minds PBC
 owners| Ibis Group
 advertised alongside| geodes, EurekaMath2, PhDScience, Arts&Letters
-states| CT, TN, AR, OH, WI
+states| CT, TN, AR, OH, WI, VA
 evidence-based| No independent, peer-reviewed studies. Ongoing efforts to examine effects are not clear.
 aligned| me
 feasible| me
@@ -76,14 +76,14 @@ cultural responsiveness|  destructive
 time required 1st grade| 90
 available grade levels | K-5
 year of publication | 2016
-state approvals| 63%
+state approvals| 56%
 
 id|BA
 name|Benchmark Advance
 company| Benchmark Education Company
 owners| family-owned
 advertised alongside| Professional development, additional phonics & additional EL resources
-states| CO, CT, DC, TN, OH, WI
+states| CO, CT, DC, TN, OH, WI, VA
 evidence-based| No independent, peer-reviewed studies. Ongoing efforts to examine effects are not clear.
 aligned| me
 feasible| me
@@ -92,7 +92,7 @@ cultural responsiveness| not rated
 time required 1st grade| 90
 available grade levels | K-5
 year of publication | 2020
-state approvals| 75%
+state approvals| 78%
 
 id|BE
 name|Benchmark Workshop
@@ -108,7 +108,7 @@ cultural responsiveness| not rated
 time required 1st grade|
 available grade levels | K-5
 year of publication | unknown
-state approvals| 50%
+state approvals| 44%
 
 id|BW
 name|Bookworms
@@ -124,14 +124,14 @@ cultural responsiveness|  not rated
 time required 1st grade| 90
 available grade levels | K-5
 year of publication | 2022
-state approvals| 13%
+state approvals| 11%
 
 id|OC
 name|Open Court
 company| McGraw Hill Education
 owners| Platinum Equity
 advertised alongside| Wonderworks, World of Wonders, Maravillas
-states| CO, CT, AR, WI
+states| CO, CT, AR, WI, VA
 evidence-based| 3 peer-reviewed studies, 2 with negative results, one neutral
 aligned| meets
 feasible| meets
@@ -140,14 +140,14 @@ cultural responsiveness| not rated
 time required 1st grade| 60-75
 available grade levels | K-6
 year of publication | 2023
-state approvals| 50%
+state approvals| 56%
 
 id|SL
 name|myView Literacy
 company| Savvas Learning
 owners| Nexus Capital Management
 advertised alongside| savvas realize, savvas one
-states| CO, CT, OH, WI
+states| CO, CT, OH, WI, VA
 evidence-based| No independent, peer-reviewed studies. Ongoing efforts to examine effects are not clear.
 aligned| meets
 feasible| meets
@@ -156,7 +156,7 @@ cultural responsiveness| destructive
 time required 1st grade| 120-180
 available grade levels | K-5
 year of publication | 2025
-state approvals| 50%
+state approvals| 56%
 
 id|AR
 name|ARC Core
@@ -172,7 +172,7 @@ cultural responsiveness| not rated
 time required 1st grade| 60-140
 available grade levels | K-12
 year of publication | 2017
-state approvals| 38%
+state approvals| 33%
 
 id|BR
 name|Being a Reader
@@ -188,14 +188,14 @@ cultural responsiveness|  not rated
 time required 1st grade| 35-65
 available grade levels | K-5
 year of publication | 2023
-state approvals| 38%
+state approvals| 33%
 
 id|ZB
 name|Superkids reading Program
 company| Zaner Bloser
 owners| Highlights for Children
 advertised alongside| none
-states| CO, AR
+states| CO, AR, VA
 evidence-based| no studies
 aligned| partially
 feasible| not rated
@@ -204,7 +204,7 @@ cultural responsiveness| not rated
 time required 1st grade| 110-130
 available grade levels | K-2
 year of publication | 2025
-state approvals| 25%
+state approvals| 33%
 
 id|RM
 name|Reading Mastery Transformations
@@ -220,7 +220,7 @@ cultural responsiveness| not rated
 time required 1st grade| unclear
 available grade levels | K-5
 year of publication | 2021
-state approvals| 13%
+state approvals| 11%
 
 id|FP
 name|Fishtank Plus ELA
@@ -236,7 +236,7 @@ cultural responsiveness| not rated
 time required 1st grade| 60
 available grade levels | K-10
 year of publication | 2021
-state approvals| 13%
+state approvals| 11%
 
 id|WR
 name| writing road to reading
@@ -252,5 +252,5 @@ cultural responsiveness| not rated
 time required 1st grade| 90-120
 available grade levels | K-6
 year of publication | 2012
-state approvals| 13%
+state approvals| 11%
 
